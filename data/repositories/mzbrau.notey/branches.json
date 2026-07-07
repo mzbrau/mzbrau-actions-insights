@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-07T20:39:03.391Z",
+  "branches": [
+    {
+      "key": "pr-50",
+      "label": "PR #50",
+      "type": "pr",
+      "latestStatus": "failed",
+      "latestDate": "2026-07-07T20:39:01.632Z",
+      "latestDurationMs": 8548,
+      "latestCommitShortSha": "737a41b",
+      "latestAuthor": "mzbrau",
+      "runCount": 1
+    }
+  ]
+}
