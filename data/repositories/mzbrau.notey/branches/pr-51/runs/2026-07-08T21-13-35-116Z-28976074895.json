@@ -1,0 +1,2567 @@
+{
+  "version": 1,
+  "runId": "28976074895",
+  "workflowRunId": 28976074895,
+  "status": "passed",
+  "date": "2026-07-08T21:13:35.116Z",
+  "durationMs": 9624,
+  "context": {
+    "repository": "mzbrau/notey",
+    "repositoryUrl": "https://github.com/mzbrau/notey",
+    "workflow": "CI",
+    "branch": "feature/buttons/1",
+    "branchKey": "pr-51",
+    "branchLabel": "PR #51",
+    "branchType": "pr",
+    "ref": "refs/pull/51/merge",
+    "prNumber": 51,
+    "prUrl": "https://github.com/mzbrau/notey/pull/51",
+    "baseBranch": "main",
+    "commitSha": "86fa20ec5aa48bbf0450569cf250bddcaf0ff150",
+    "commitShortSha": "86fa20e",
+    "commitMessage": "Workflow run",
+    "commitUrl": "https://github.com/mzbrau/notey/commit/86fa20ec5aa48bbf0450569cf250bddcaf0ff150",
+    "author": "mzbrau",
+    "actor": "mzbrau",
+    "startedAt": "2026-07-08T21:13:35.424Z",
+    "completedAt": "2026-07-08T21:13:35.116Z"
+  },
+  "stats": {
+    "total": 360,
+    "passed": 360,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "durationMs": 9624,
+    "successRate": 100
+  },
+  "tests": [
+    {
+      "i": 0,
+      "n": "Notey.Tests.DocumentStoreIndexTests.GetDynamicValueSuggestionsAsync_reads_folder_values_for_command",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.DocumentStoreIndexTests.GetDynamicValueSuggestionsAsync_reads_folder_values_for_command"
+    },
+    {
+      "i": 1,
+      "n": "Notey.Tests.DocumentStoreIndexTests.GetFolderCommandsAsync_maps_notes_folders_to_singular_commands",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.DocumentStoreIndexTests.GetFolderCommandsAsync_maps_notes_folders_to_singular_commands"
+    },
+    {
+      "i": 2,
+      "n": "Notey.Tests.DocumentStoreIndexTests.GetTopicSuggestionsAsync_reads_documents_excluding_draft_meetings_and_tasks",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DocumentStoreIndexTests.GetTopicSuggestionsAsync_reads_documents_excluding_draft_meetings_and_tasks"
+    },
+    {
+      "i": 3,
+      "n": "Notey.Tests.DocumentStoreIndexTests.GetTopicTargetSuggestionsAsync_preserves_global_topic_fallback",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.DocumentStoreIndexTests.GetTopicTargetSuggestionsAsync_preserves_global_topic_fallback"
+    },
+    {
+      "i": 4,
+      "n": "Notey.Tests.DocumentStoreIndexTests.GetTopicTargetSuggestionsAsync_scopes_recursively_under_dynamic_context",
+      "o": 0,
+      "d": 19,
+      "m": "Notey.Tests.DocumentStoreIndexTests.GetTopicTargetSuggestionsAsync_scopes_recursively_under_dynamic_context"
+    },
+    {
+      "i": 5,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_explicit_topic_file_target",
+      "o": 0,
+      "d": 11,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_explicit_topic_file_target"
+    },
+    {
+      "i": 6,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_tasks_on_new_line_when_existing_heading_has_no_trailing_newline",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_tasks_on_new_line_when_existing_heading_has_no_trailing_newline"
+    },
+    {
+      "i": 7,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_tasks_to_tasks_file",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_tasks_to_tasks_file"
+    },
+    {
+      "i": 8,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_tasks_under_exact_date_heading",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_tasks_under_exact_date_heading"
+    },
+    {
+      "i": 9,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_topic_note_adds_exact_date_heading_when_only_prefix_exists",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_topic_note_adds_exact_date_heading_when_only_prefix_exists"
+    },
+    {
+      "i": 10,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_topic_only_note_under_existing_date_heading",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_appends_topic_only_note_under_existing_date_heading"
+    },
+    {
+      "i": 11,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_creates_meeting_under_first_dynamic_folder",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_creates_meeting_under_first_dynamic_folder"
+    },
+    {
+      "i": 12,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_creates_note_inside_explicit_topic_folder_target",
+      "o": 0,
+      "d": 6,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_creates_note_inside_explicit_topic_folder_target"
+    },
+    {
+      "i": 13,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_does_not_add_date_field_for_non_meeting_note",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_does_not_add_date_field_for_non_meeting_note"
+    },
+    {
+      "i": 14,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_falls_back_to_body_based_filename_when_ai_is_not_configured",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_falls_back_to_body_based_filename_when_ai_is_not_configured"
+    },
+    {
+      "i": 15,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_falls_back_to_ocr_based_filename_when_ai_is_not_configured",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_falls_back_to_ocr_based_filename_when_ai_is_not_configured"
+    },
+    {
+      "i": 16,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_falls_back_when_provider_reports_missing_configuration",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_falls_back_when_provider_reports_missing_configuration"
+    },
+    {
+      "i": 17,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_filters_ai_people_and_tags_by_confidence_and_tag_length",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_filters_ai_people_and_tags_by_confidence_and_tag_length"
+    },
+    {
+      "i": 18,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_ignores_unscored_legacy_people_and_tags",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_ignores_unscored_legacy_people_and_tags"
+    },
+    {
+      "i": 19,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_includes_known_people_context_for_direct_ocr_snippets",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_includes_known_people_context_for_direct_ocr_snippets"
+    },
+    {
+      "i": 20,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_includes_known_people_context_for_included_image_ocr",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_includes_known_people_context_for_included_image_ocr"
+    },
+    {
+      "i": 21,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_links_tasks_to_source_note_and_back",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_links_tasks_to_source_note_and_back"
+    },
+    {
+      "i": 22,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_preserves_existing_person_wiki_links_when_linking_ai_people",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_preserves_existing_person_wiki_links_when_linking_ai_people"
+    },
+    {
+      "i": 23,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_preserves_legacy_dynamic_topic_route",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_preserves_legacy_dynamic_topic_route"
+    },
+    {
+      "i": 24,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_promotes_staged_attachments_when_appending_to_existing_topic_note",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_promotes_staged_attachments_when_appending_to_existing_topic_note"
+    },
+    {
+      "i": 25,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_promotes_staged_draft_attachments_and_rewrites_links",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_promotes_staged_draft_attachments_and_rewrites_links"
+    },
+    {
+      "i": 26,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_rejects_draft_attachment_links_that_traverse_outside_staging_folder",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_rejects_draft_attachment_links_that_traverse_outside_staging_folder"
+    },
+    {
+      "i": 27,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_rolls_back_promoted_attachments_when_final_note_write_fails",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_rolls_back_promoted_attachments_when_final_note_write_fails"
+    },
+    {
+      "i": 28,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_routes_by_first_dynamic_directive",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_routes_by_first_dynamic_directive"
+    },
+    {
+      "i": 29,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_routes_meeting_without_dynamic_folder_under_notes_meetings",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_routes_meeting_without_dynamic_folder_under_notes_meetings"
+    },
+    {
+      "i": 30,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_skips_included_image_ocr_when_ocr_is_unavailable",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_skips_included_image_ocr_when_ocr_is_unavailable"
+    },
+    {
+      "i": 31,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_surfaces_non_dependency_ocr_configuration_errors",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_surfaces_non_dependency_ocr_configuration_errors"
+    },
+    {
+      "i": 32,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_uses_direct_ocr_snippet_without_typed_body",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessAsync_uses_direct_ocr_snippet_without_typed_body"
+    },
+    {
+      "i": 33,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_extracts_indented_task_directives",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_extracts_indented_task_directives"
+    },
+    {
+      "i": 34,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_preserves_created_timestamp_and_updates_existing_file_in_place",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_preserves_created_timestamp_and_updates_existing_file_in_place"
+    },
+    {
+      "i": 35,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_preserves_literal_task_lines_in_code_fences",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_preserves_literal_task_lines_in_code_fences"
+    },
+    {
+      "i": 36,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_preserves_meeting_date_field_when_reprocessing",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_preserves_meeting_date_field_when_reprocessing"
+    },
+    {
+      "i": 37,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_uses_created_date_as_meeting_date_fallback_for_legacy_notes",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessExistingNoteAsync_uses_created_date_as_meeting_date_fallback_for_legacy_notes"
+    },
+    {
+      "i": 38,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_caches_known_people_prompt_section_for_subsequent_requests",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_caches_known_people_prompt_section_for_subsequent_requests"
+    },
+    {
+      "i": 39,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_includes_known_people_context",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_includes_known_people_context"
+    },
+    {
+      "i": 40,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_limits_known_people_prompt_size",
+      "o": 0,
+      "d": 30,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_limits_known_people_prompt_size"
+    },
+    {
+      "i": 41,
+      "n": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_omits_known_people_context_when_no_people_exist",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.DraftProcessingServiceTests.ProcessOcrSnippetAsync_omits_known_people_context_when_no_people_exist"
+    },
+    {
+      "i": 42,
+      "n": "Notey.Tests.ExistingDocumentImportServiceTests.ImportFolderAsync_imports_text_referenced_assets_and_unknown_files",
+      "o": 0,
+      "d": 15,
+      "m": "Notey.Tests.ExistingDocumentImportServiceTests.ImportFolderAsync_imports_text_referenced_assets_and_unknown_files"
+    },
+    {
+      "i": 43,
+      "n": "Notey.Tests.ExistingDocumentImportServiceTests.ImportFolderAsync_reuses_image_imports_referenced_by_multiple_notes",
+      "o": 0,
+      "d": 29,
+      "m": "Notey.Tests.ExistingDocumentImportServiceTests.ImportFolderAsync_reuses_image_imports_referenced_by_multiple_notes"
+    },
+    {
+      "i": 44,
+      "n": "Notey.Tests.ExistingDocumentImportServiceTests.ProcessAsync_includes_import_context_in_ai_prompt",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.ExistingDocumentImportServiceTests.ProcessAsync_includes_import_context_in_ai_prompt"
+    },
+    {
+      "i": 45,
+      "n": "Notey.Tests.FileImportServiceTests.ImportAsync_copies_generic_files_directly_to_open_final_note_assets",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.FileImportServiceTests.ImportAsync_copies_generic_files_directly_to_open_final_note_assets"
+    },
+    {
+      "i": 46,
+      "n": "Notey.Tests.FileImportServiceTests.ImportAsync_copies_images_to_images_folder_and_returns_embed",
+      "o": 0,
+      "d": 6,
+      "m": "Notey.Tests.FileImportServiceTests.ImportAsync_copies_images_to_images_folder_and_returns_embed"
+    },
+    {
+      "i": 47,
+      "n": "Notey.Tests.FileImportServiceTests.ImportAsync_formats_msg_and_recursively_imports_non_inline_attachments",
+      "o": 0,
+      "d": 17,
+      "m": "Notey.Tests.FileImportServiceTests.ImportAsync_formats_msg_and_recursively_imports_non_inline_attachments"
+    },
+    {
+      "i": 48,
+      "n": "Notey.Tests.FileImportServiceTests.ImportAsync_rolls_back_written_message_attachments_when_nested_import_fails",
+      "o": 0,
+      "d": 37,
+      "m": "Notey.Tests.FileImportServiceTests.ImportAsync_rolls_back_written_message_attachments_when_nested_import_fails"
+    },
+    {
+      "i": 49,
+      "n": "Notey.Tests.FileImportServiceTests.ImportAsync_stages_generic_files_with_active_draft",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.FileImportServiceTests.ImportAsync_stages_generic_files_with_active_draft"
+    },
+    {
+      "i": 50,
+      "n": "Notey.Tests.HotkeyGestureTests.Parse_normalizes_default_open_note_hotkey",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.HotkeyGestureTests.Parse_normalizes_default_open_note_hotkey"
+    },
+    {
+      "i": 51,
+      "n": "Notey.Tests.HotkeyGestureTests.Parse_normalizes_key_aliases",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.HotkeyGestureTests.Parse_normalizes_key_aliases"
+    },
+    {
+      "i": 52,
+      "n": "Notey.Tests.HotkeyGestureTests.Parse_rejects_duplicate_modifiers",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.HotkeyGestureTests.Parse_rejects_duplicate_modifiers"
+    },
+    {
+      "i": 53,
+      "n": "Notey.Tests.HotkeyGestureTests.Parse_rejects_missing_modifier",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.HotkeyGestureTests.Parse_rejects_missing_modifier"
+    },
+    {
+      "i": 54,
+      "n": "Notey.Tests.HunspellSpellcheckServiceTests.Bundled_en_us_dictionary_checks_words_and_returns_suggestions",
+      "o": 0,
+      "d": 266,
+      "m": "Notey.Tests.HunspellSpellcheckServiceTests.Bundled_en_us_dictionary_checks_words_and_returns_suggestions"
+    },
+    {
+      "i": 55,
+      "n": "Notey.Tests.ImagePreviewWindowTests.CreatePreviewContent_uses_a_direct_image_without_scrollviewer",
+      "o": 0,
+      "d": 7,
+      "m": "Notey.Tests.ImagePreviewWindowTests.CreatePreviewContent_uses_a_direct_image_without_scrollviewer"
+    },
+    {
+      "i": 56,
+      "n": "Notey.Tests.ImagePreviewWindowTests.GetConstrainedImageSize_scales_large_images_to_fit_available_space",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.ImagePreviewWindowTests.GetConstrainedImageSize_scales_large_images_to_fit_available_space"
+    },
+    {
+      "i": 57,
+      "n": "Notey.Tests.LocalSettingsPathResolverTests.HostBootstrapper_loads_settings_from_user_profile_path",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.LocalSettingsPathResolverTests.HostBootstrapper_loads_settings_from_user_profile_path"
+    },
+    {
+      "i": 58,
+      "n": "Notey.Tests.LocalSettingsPathResolverTests.MigrateIfNeeded_copies_legacy_file_when_target_does_not_exist",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.LocalSettingsPathResolverTests.MigrateIfNeeded_copies_legacy_file_when_target_does_not_exist"
+    },
+    {
+      "i": 59,
+      "n": "Notey.Tests.LocalSettingsPathResolverTests.MigrateIfNeeded_is_no_op_when_target_already_exists",
+      "o": 0,
+      "d": 15,
+      "m": "Notey.Tests.LocalSettingsPathResolverTests.MigrateIfNeeded_is_no_op_when_target_already_exists"
+    },
+    {
+      "i": 60,
+      "n": "Notey.Tests.LocalSettingsPathResolverTests.NoteySettingsStore_default_path_uses_resolver",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.LocalSettingsPathResolverTests.NoteySettingsStore_default_path_uses_resolver"
+    },
+    {
+      "i": 61,
+      "n": "Notey.Tests.LocalSettingsPathResolverTests.Resolve_directory_contains_Notey_folder_name",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.LocalSettingsPathResolverTests.Resolve_directory_contains_Notey_folder_name"
+    },
+    {
+      "i": 62,
+      "n": "Notey.Tests.LocalSettingsPathResolverTests.Resolve_returns_path_ending_with_appsettings_Local_json",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.LocalSettingsPathResolverTests.Resolve_returns_path_ending_with_appsettings_Local_json"
+    },
+    {
+      "i": 63,
+      "n": "Notey.Tests.LocalSettingsPathResolverTests.Resolve_returns_path_outside_app_base_directory",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.LocalSettingsPathResolverTests.Resolve_returns_path_outside_app_base_directory"
+    },
+    {
+      "i": 64,
+      "n": "Notey.Tests.MainWindowRecentSwitchTests.SelectPrimaryWrittenNotePath_returns_first_non_tasks_file",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowRecentSwitchTests.SelectPrimaryWrittenNotePath_returns_first_non_tasks_file"
+    },
+    {
+      "i": 65,
+      "n": "Notey.Tests.MainWindowRecentSwitchTests.SelectPrimaryWrittenNotePath_returns_null_when_only_tasks_were_written",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowRecentSwitchTests.SelectPrimaryWrittenNotePath_returns_null_when_only_tasks_were_written"
+    },
+    {
+      "i": 66,
+      "n": "Notey.Tests.MainWindowShortcutTests.CalculateCompletionPanelWidth_uses_available_editor_width(editorWidth: 1180, leftOffset: 96, expected: 920)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.CalculateCompletionPanelWidth_uses_available_editor_width(editorWidth: 1180, leftOffset: 96, expected: 920)"
+    },
+    {
+      "i": 67,
+      "n": "Notey.Tests.MainWindowShortcutTests.CalculateCompletionPanelWidth_uses_available_editor_width(editorWidth: 420, leftOffset: 96, expected: 300)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.CalculateCompletionPanelWidth_uses_available_editor_width(editorWidth: 420, leftOffset: 96, expected: 300)"
+    },
+    {
+      "i": 68,
+      "n": "Notey.Tests.MainWindowShortcutTests.CalculateCompletionPanelWidth_uses_available_editor_width(editorWidth: 820, leftOffset: 96, expected: 700)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.CalculateCompletionPanelWidth_uses_available_editor_width(editorWidth: 820, leftOffset: 96, expected: 700)"
+    },
+    {
+      "i": 69,
+      "n": "Notey.Tests.MainWindowShortcutTests.EstimateCompletionPanelHeight_uses_suggestion_count_before_flipping(suggestionCount: 1, maxHeight: 280, expected: 58)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.EstimateCompletionPanelHeight_uses_suggestion_count_before_flipping(suggestionCount: 1, maxHeight: 280, expected: 58)"
+    },
+    {
+      "i": 70,
+      "n": "Notey.Tests.MainWindowShortcutTests.EstimateCompletionPanelHeight_uses_suggestion_count_before_flipping(suggestionCount: 10, maxHeight: 280, expected: 280)",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.MainWindowShortcutTests.EstimateCompletionPanelHeight_uses_suggestion_count_before_flipping(suggestionCount: 10, maxHeight: 280, expected: 280)"
+    },
+    {
+      "i": 71,
+      "n": "Notey.Tests.MainWindowShortcutTests.EstimateCompletionPanelHeight_uses_suggestion_count_before_flipping(suggestionCount: 3, maxHeight: 280, expected: 142)",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MainWindowShortcutTests.EstimateCompletionPanelHeight_uses_suggestion_count_before_flipping(suggestionCount: 3, maxHeight: 280, expected: 142)"
+    },
+    {
+      "i": 72,
+      "n": "Notey.Tests.MainWindowShortcutTests.FormatAssistantResult_shows_full_replace_all_text",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.MainWindowShortcutTests.FormatAssistantResult_shows_full_replace_all_text"
+    },
+    {
+      "i": 73,
+      "n": "Notey.Tests.MainWindowShortcutTests.GetPersonCompletionDisplayName_title_cases_lowercase_without_rewriting_intentional_casing(input: \"iOS Team\", expected: \"iOS Team\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.GetPersonCompletionDisplayName_title_cases_lowercase_without_rewriting_intentional_casing(input: \"iOS Team\", expected: \"iOS Team\")"
+    },
+    {
+      "i": 74,
+      "n": "Notey.Tests.MainWindowShortcutTests.GetPersonCompletionDisplayName_title_cases_lowercase_without_rewriting_intentional_casing(input: \"james simpson\", expected: \"James Simpson\")",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MainWindowShortcutTests.GetPersonCompletionDisplayName_title_cases_lowercase_without_rewriting_intentional_casing(input: \"james simpson\", expected: \"James Simpson\")"
+    },
+    {
+      "i": 75,
+      "n": "Notey.Tests.MainWindowShortcutTests.GetPersonCompletionDisplayName_title_cases_lowercase_without_rewriting_intentional_casing(input: \"Jane \\\"JJ\\\" Doe\", expected: \"Jane \\\"JJ\\\" Doe\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.GetPersonCompletionDisplayName_title_cases_lowercase_without_rewriting_intentional_casing(input: \"Jane \\\"JJ\\\" Doe\", expected: \"Jane \\\"JJ\\\" Doe\")"
+    },
+    {
+      "i": 76,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Control | Shift, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Control | Shift, expected: False)"
+    },
+    {
+      "i": 77,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Control, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Control, expected: True)"
+    },
+    {
+      "i": 78,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Meta, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Meta, expected: True)"
+    },
+    {
+      "i": 79,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: None, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: None, expected: True)"
+    },
+    {
+      "i": 80,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Shift, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Return, modifiers: Shift, expected: False)"
+    },
+    {
+      "i": 81,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Tab, modifiers: None, expected: False)",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsAssistantSendShortcut_matches_enter_without_shift_or_extra_modifiers(key: Tab, modifiers: None, expected: False)"
+    },
+    {
+      "i": 82,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: K, modifiers: Alt | Control, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: K, modifiers: Alt | Control, expected: False)"
+    },
+    {
+      "i": 83,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Alt | Control, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Alt | Control, expected: True)"
+    },
+    {
+      "i": 84,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Alt | Meta, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Alt | Meta, expected: True)"
+    },
+    {
+      "i": 85,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Control | Shift, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Control | Shift, expected: False)"
+    },
+    {
+      "i": 86,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Control, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsFormatTablesShortcut_matches_control_or_command_alt_t(key: T, modifiers: Control, expected: False)"
+    },
+    {
+      "i": 87,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: N, modifiers: Control, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: N, modifiers: Control, expected: False)"
+    },
+    {
+      "i": 88,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: Alt | Control, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: Alt | Control, expected: False)"
+    },
+    {
+      "i": 89,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: Control, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: Control, expected: True)"
+    },
+    {
+      "i": 90,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: Meta, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: Meta, expected: True)"
+    },
+    {
+      "i": 91,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: None, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsNewTaskShortcut_matches_control_or_command_t(key: T, modifiers: None, expected: False)"
+    },
+    {
+      "i": 92,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: N, modifiers: Control, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: N, modifiers: Control, expected: False)"
+    },
+    {
+      "i": 93,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: Control | Shift, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: Control | Shift, expected: False)"
+    },
+    {
+      "i": 94,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: Control, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: Control, expected: True)"
+    },
+    {
+      "i": 95,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: Meta, expected: True)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: Meta, expected: True)"
+    },
+    {
+      "i": 96,
+      "n": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: None, expected: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.IsOpenRecentDialogShortcut_matches_control_or_command_r(key: R, modifiers: None, expected: False)"
+    },
+    {
+      "i": 97,
+      "n": "Notey.Tests.MainWindowShortcutTests.TryBeginOpenRecentDialog_rejects_reentry_when_already_open",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.TryBeginOpenRecentDialog_rejects_reentry_when_already_open"
+    },
+    {
+      "i": 98,
+      "n": "Notey.Tests.MainWindowShortcutTests.TryBeginOpenRecentDialog_sets_guard_on_first_entry",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MainWindowShortcutTests.TryBeginOpenRecentDialog_sets_guard_on_first_entry"
+    },
+    {
+      "i": 99,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Assistant_panel_toggles_and_accepts_multiline_prompt",
+      "o": 0,
+      "d": 119,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Assistant_panel_toggles_and_accepts_multiline_prompt"
+    },
+    {
+      "i": 100,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Assistant_prompt_enter_submits_request",
+      "o": 0,
+      "d": 198,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Assistant_prompt_enter_submits_request"
+    },
+    {
+      "i": 101,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Assistant_prompt_shift_enter_keeps_multiline_behavior",
+      "o": 0,
+      "d": 112,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Assistant_prompt_shift_enter_keeps_multiline_behavior"
+    },
+    {
+      "i": 102,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Bold_shortcut_unwraps_selected_text_without_crashing",
+      "o": 0,
+      "d": 152,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Bold_shortcut_unwraps_selected_text_without_crashing"
+    },
+    {
+      "i": 103,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Close_hides_immediately_in_tray_mode_and_processes_draft_in_background",
+      "o": 0,
+      "d": 113,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Close_hides_immediately_in_tray_mode_and_processes_draft_in_background"
+    },
+    {
+      "i": 104,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Draft_can_be_processed_and_reopened_from_recent_notes",
+      "o": 0,
+      "d": 216,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Draft_can_be_processed_and_reopened_from_recent_notes"
+    },
+    {
+      "i": 105,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Enter_in_new_task_textbox_creates_task",
+      "o": 0,
+      "d": 186,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Enter_in_new_task_textbox_creates_task"
+    },
+    {
+      "i": 106,
+      "n": "Notey.Tests.MainWindowUiFlowTests.File_import_for_explicit_insertion_offset_inserts_at_requested_position",
+      "o": 0,
+      "d": 187,
+      "m": "Notey.Tests.MainWindowUiFlowTests.File_import_for_explicit_insertion_offset_inserts_at_requested_position"
+    },
+    {
+      "i": 107,
+      "n": "Notey.Tests.MainWindowUiFlowTests.File_import_into_open_final_note_copies_attachment_to_final_assets",
+      "o": 0,
+      "d": 137,
+      "m": "Notey.Tests.MainWindowUiFlowTests.File_import_into_open_final_note_copies_attachment_to_final_assets"
+    },
+    {
+      "i": 108,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Format_tables_shortcut_does_not_mutate_read_only_editor",
+      "o": 0,
+      "d": 187,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Format_tables_shortcut_does_not_mutate_read_only_editor"
+    },
+    {
+      "i": 109,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Markdown_editor_uses_monospace_font_for_table_alignment",
+      "o": 0,
+      "d": 131,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Markdown_editor_uses_monospace_font_for_table_alignment"
+    },
+    {
+      "i": 110,
+      "n": "Notey.Tests.MainWindowUiFlowTests.New_note_appears_immediately_while_previous_draft_processes_in_background",
+      "o": 0,
+      "d": 113,
+      "m": "Notey.Tests.MainWindowUiFlowTests.New_note_appears_immediately_while_previous_draft_processes_in_background"
+    },
+    {
+      "i": 111,
+      "n": "Notey.Tests.MainWindowUiFlowTests.New_task_shortcut_opens_add_task_form",
+      "o": 0,
+      "d": 120,
+      "m": "Notey.Tests.MainWindowUiFlowTests.New_task_shortcut_opens_add_task_form"
+    },
+    {
+      "i": 112,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Next_week_button_sets_date_to_friday_of_next_week",
+      "o": 0,
+      "d": 118,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Next_week_button_sets_date_to_friday_of_next_week"
+    },
+    {
+      "i": 113,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Open_recent_note_edits_are_processed_in_place",
+      "o": 0,
+      "d": 534,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Open_recent_note_edits_are_processed_in_place"
+    },
+    {
+      "i": 114,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Open_recent_note_setup_gate_is_not_reentrant",
+      "o": 0,
+      "d": 19,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Open_recent_note_setup_gate_is_not_reentrant"
+    },
+    {
+      "i": 115,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Paste_shortcut_converts_google_docs_newline_cell_table",
+      "o": 0,
+      "d": 180,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Paste_shortcut_converts_google_docs_newline_cell_table"
+    },
+    {
+      "i": 116,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Paste_shortcut_converts_nested_plain_text_list",
+      "o": 0,
+      "d": 194,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Paste_shortcut_converts_nested_plain_text_list"
+    },
+    {
+      "i": 117,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Paste_shortcut_does_not_mutate_read_only_editor",
+      "o": 0,
+      "d": 177,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Paste_shortcut_does_not_mutate_read_only_editor"
+    },
+    {
+      "i": 118,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Recent_note_can_be_opened_with_correct_path_and_content",
+      "o": 0,
+      "d": 143,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Recent_note_can_be_opened_with_correct_path_and_content"
+    },
+    {
+      "i": 119,
+      "n": "Notey.Tests.MainWindowUiFlowTests.RequestExit_waits_for_processing_before_closing_even_in_tray_mode",
+      "o": 0,
+      "d": 338,
+      "m": "Notey.Tests.MainWindowUiFlowTests.RequestExit_waits_for_processing_before_closing_even_in_tray_mode"
+    },
+    {
+      "i": 120,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Set_due_today_action_is_icon_only_and_moves_task_to_today",
+      "o": 0,
+      "d": 340,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Set_due_today_action_is_icon_only_and_moves_task_to_today"
+    },
+    {
+      "i": 121,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Slash_command_completion_uses_wide_shared_dropdown",
+      "o": 0,
+      "d": 125,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Slash_command_completion_uses_wide_shared_dropdown"
+    },
+    {
+      "i": 122,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Task_due_date_arrow_buttons_shift_dated_tasks",
+      "o": 0,
+      "d": 293,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Task_due_date_arrow_buttons_shift_dated_tasks"
+    },
+    {
+      "i": 123,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_cancel_discards_staged_changes",
+      "o": 0,
+      "d": 205,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_cancel_discards_staged_changes"
+    },
+    {
+      "i": 124,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_clear_due_date_is_staged_until_save",
+      "o": 0,
+      "d": 231,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_clear_due_date_is_staged_until_save"
+    },
+    {
+      "i": 125,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_deletes_task",
+      "o": 0,
+      "d": 241,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_deletes_task"
+    },
+    {
+      "i": 126,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_saves_text_and_due_date_changes",
+      "o": 0,
+      "d": 383,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Task_edit_popup_saves_text_and_due_date_changes"
+    },
+    {
+      "i": 127,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Task_section_count_badges_are_colored_when_nonzero",
+      "o": 0,
+      "d": 183,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Task_section_count_badges_are_colored_when_nonzero"
+    },
+    {
+      "i": 128,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Tasks_panel_adds_task_and_updates_badge",
+      "o": 0,
+      "d": 184,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Tasks_panel_adds_task_and_updates_badge"
+    },
+    {
+      "i": 129,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Tomorrow_button_sets_date_to_tomorrow",
+      "o": 0,
+      "d": 127,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Tomorrow_button_sets_date_to_tomorrow"
+    },
+    {
+      "i": 130,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Toolbar_exposes_import_button",
+      "o": 0,
+      "d": 141,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Toolbar_exposes_import_button"
+    },
+    {
+      "i": 131,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Topic_completion_scopes_to_nearest_dynamic_context_and_shows_target_icons",
+      "o": 0,
+      "d": 216,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Topic_completion_scopes_to_nearest_dynamic_context_and_shows_target_icons"
+    },
+    {
+      "i": 132,
+      "n": "Notey.Tests.MainWindowUiFlowTests.Undated_task_today_button_moves_task_to_today",
+      "o": 0,
+      "d": 363,
+      "m": "Notey.Tests.MainWindowUiFlowTests.Undated_task_today_button_moves_task_to_today"
+    },
+    {
+      "i": 133,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_converts_nested_unordered_list",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_converts_nested_unordered_list"
+    },
+    {
+      "i": 134,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_ignores_lists_nested_inside_tables",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_ignores_lists_nested_inside_tables"
+    },
+    {
+      "i": 135,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_preserves_inline_markdown_and_checkbox_items",
+      "o": 0,
+      "d": 11,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_preserves_inline_markdown_and_checkbox_items"
+    },
+    {
+      "i": 136,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_preserves_ordered_list_start_and_nested_mixed_lists",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertHtmlList_preserves_ordered_list_start_and_nested_mixed_lists"
+    },
+    {
+      "i": 137,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertPlainTextList_converts_nested_bullets_and_tasks",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertPlainTextList_converts_nested_bullets_and_tasks"
+    },
+    {
+      "i": 138,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertPlainTextList_does_not_convert_single_item_text",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertPlainTextList_does_not_convert_single_item_text"
+    },
+    {
+      "i": 139,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_html_list_layout_table_to_list",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_html_list_layout_table_to_list"
+    },
+    {
+      "i": 140,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_html_list_table_with_sub_bullets_to_nested_list",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_html_list_table_with_sub_bullets_to_nested_list"
+    },
+    {
+      "i": 141,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_html_ordered_list_layout_table_to_list",
+      "o": 0,
+      "d": 8,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_html_ordered_list_layout_table_to_list"
+    },
+    {
+      "i": 142,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_tab_separated_bullets_to_list",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_tab_separated_bullets_to_list"
+    },
+    {
+      "i": 143,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_tab_separated_nested_bullets_to_nested_list",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_converts_word_tab_separated_nested_bullets_to_nested_list"
+    },
+    {
+      "i": 144,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_does_not_fall_back_to_plain_text_when_structured_html_fails",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_does_not_fall_back_to_plain_text_when_structured_html_fails"
+    },
+    {
+      "i": 145,
+      "n": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_does_not_misidentify_real_html_table_as_list",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.MarkdownClipboardFormatterTests.TryConvertToMarkdown_does_not_misidentify_real_html_table_as_list"
+    },
+    {
+      "i": 146,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.ToggleBold_inserts_markers_at_empty_selection",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.ToggleBold_inserts_markers_at_empty_selection"
+    },
+    {
+      "i": 147,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.ToggleBold_unwraps_selected_text",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.ToggleBold_unwraps_selected_text"
+    },
+    {
+      "i": 148,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.ToggleBold_wraps_selected_text",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.ToggleBold_wraps_selected_text"
+    },
+    {
+      "i": 149,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.ToggleItalic_unwraps_selection_with_surrounding_markers",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.ToggleItalic_unwraps_selection_with_surrounding_markers"
+    },
+    {
+      "i": 150,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.ToggleItalic_wraps_selected_text",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.ToggleItalic_wraps_selected_text"
+    },
+    {
+      "i": 151,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertHtmlTable_converts_table_fragment",
+      "o": 0,
+      "d": 138,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertHtmlTable_converts_table_fragment"
+    },
+    {
+      "i": 152,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertHtmlTable_rejects_merged_cells",
+      "o": 0,
+      "d": 11,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertHtmlTable_rejects_merged_cells"
+    },
+    {
+      "i": 153,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_business_headers",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_business_headers"
+    },
+    {
+      "i": 154,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_emergency_service_headers",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_emergency_service_headers"
+    },
+    {
+      "i": 155,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_google_docs_newline_cell_stream",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_google_docs_newline_cell_stream"
+    },
+    {
+      "i": 156,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_personal_headers",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_personal_headers"
+    },
+    {
+      "i": 157,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_tab_delimited_table",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_converts_tab_delimited_table"
+    },
+    {
+      "i": 158,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_does_not_convert_ordinary_newline_list",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_does_not_convert_ordinary_newline_list"
+    },
+    {
+      "i": 159,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_ignores_trailing_blank_google_docs_cells",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertPlainTextTable_ignores_trailing_blank_google_docs_cells"
+    },
+    {
+      "i": 160,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertRtfTable_converts_cell_rows",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryConvertRtfTable_converts_cell_rows"
+    },
+    {
+      "i": 161,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_continues_unordered_list",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_continues_unordered_list"
+    },
+    {
+      "i": 162,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_ignores_caret_at_document_start",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_ignores_caret_at_document_start"
+    },
+    {
+      "i": 163,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_ignores_ordered_numbers_that_cannot_increment",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_ignores_ordered_numbers_that_cannot_increment"
+    },
+    {
+      "i": 164,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_increments_ordered_list",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_increments_ordered_list"
+    },
+    {
+      "i": 165,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_reports_invalid_caret_parameter_name",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryCreateListContinuation_reports_invalid_caret_parameter_name"
+    },
+    {
+      "i": 166,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_aligns_markdown_tables_and_preserves_alignment_markers",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_aligns_markdown_tables_and_preserves_alignment_markers"
+    },
+    {
+      "i": 167,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_aligns_reported_sample_table",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_aligns_reported_sample_table"
+    },
+    {
+      "i": 168,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_caps_column_padding_without_changing_cell_text",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_caps_column_padding_without_changing_cell_text"
+    },
+    {
+      "i": 169,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_ignores_fenced_code_blocks",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryFormatTables_ignores_fenced_code_blocks"
+    },
+    {
+      "i": 170,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_adds_row_from_empty_final_row",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_adds_row_from_empty_final_row"
+    },
+    {
+      "i": 171,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_adds_row_from_last_cell_and_reformats_table",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_adds_row_from_last_cell_and_reformats_table"
+    },
+    {
+      "i": 172,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_adds_row_when_caret_is_after_last_column",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_adds_row_when_caret_is_after_last_column"
+    },
+    {
+      "i": 173,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_handles_escaped_pipe_cells",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_handles_escaped_pipe_cells"
+    },
+    {
+      "i": 174,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_keeps_shift_tab_in_first_editable_cell",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_keeps_shift_tab_in_first_editable_cell"
+    },
+    {
+      "i": 175,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_moves_backward_between_cells_and_skips_separator",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_moves_backward_between_cells_and_skips_separator"
+    },
+    {
+      "i": 176,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_moves_forward_between_cells_and_skips_separator",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_moves_forward_between_cells_and_skips_separator"
+    },
+    {
+      "i": 177,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_moves_forward_without_rewriting_formatted_table",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_moves_forward_without_rewriting_formatted_table"
+    },
+    {
+      "i": 178,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_returns_null_for_selection_plain_text_and_fenced_table",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_returns_null_for_selection_plain_text_and_fenced_table"
+    },
+    {
+      "i": 179,
+      "n": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_returns_null_on_line_after_table",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownEditorCommandsTests.TryNavigateTableCell_returns_null_on_line_after_table"
+    },
+    {
+      "i": 180,
+      "n": "Notey.Tests.MarkdownSpellcheckIndexTests.Build_reports_misspellings_in_plain_prose",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MarkdownSpellcheckIndexTests.Build_reports_misspellings_in_plain_prose"
+    },
+    {
+      "i": 181,
+      "n": "Notey.Tests.MarkdownSpellcheckIndexTests.Build_returns_empty_when_dictionary_is_unavailable",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.MarkdownSpellcheckIndexTests.Build_returns_empty_when_dictionary_is_unavailable"
+    },
+    {
+      "i": 182,
+      "n": "Notey.Tests.MarkdownSpellcheckIndexTests.Build_skips_markdown_non_prose_ranges",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.MarkdownSpellcheckIndexTests.Build_skips_markdown_non_prose_ranges"
+    },
+    {
+      "i": 183,
+      "n": "Notey.Tests.MetadataInputMergerTests.Merge_handles_empty_current_input",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MetadataInputMergerTests.Merge_handles_empty_current_input"
+    },
+    {
+      "i": 184,
+      "n": "Notey.Tests.MetadataInputMergerTests.Merge_preserves_existing_values_and_appends_unique_normalized_additions",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.MetadataInputMergerTests.Merge_preserves_existing_values_and_appends_unique_normalized_additions"
+    },
+    {
+      "i": 185,
+      "n": "Notey.Tests.MsgReaderMessageImportReaderTests.ReadAsync_registers_legacy_code_pages_before_creating_storage_message",
+      "o": 0,
+      "d": 13,
+      "m": "Notey.Tests.MsgReaderMessageImportReaderTests.ReadAsync_registers_legacy_code_pages_before_creating_storage_message"
+    },
+    {
+      "i": 186,
+      "n": "Notey.Tests.NoteDirectiveParserTests.Parse_extracts_tasks_and_due_dates",
+      "o": 0,
+      "d": 10,
+      "m": "Notey.Tests.NoteDirectiveParserTests.Parse_extracts_tasks_and_due_dates"
+    },
+    {
+      "i": 187,
+      "n": "Notey.Tests.NoteDirectiveParserTests.Parse_keeps_topic_title_separate_from_file_target",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteDirectiveParserTests.Parse_keeps_topic_title_separate_from_file_target"
+    },
+    {
+      "i": 188,
+      "n": "Notey.Tests.NoteDirectiveParserTests.Parse_keeps_topic_title_separate_from_folder_target",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.NoteDirectiveParserTests.Parse_keeps_topic_title_separate_from_folder_target"
+    },
+    {
+      "i": 189,
+      "n": "Notey.Tests.NoteDirectiveParserTests.Parse_legacy_topic_has_no_explicit_target",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteDirectiveParserTests.Parse_legacy_topic_has_no_explicit_target"
+    },
+    {
+      "i": 190,
+      "n": "Notey.Tests.NoteDirectiveParserTests.Parse_preserves_unknown_commands_in_body",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDirectiveParserTests.Parse_preserves_unknown_commands_in_body"
+    },
+    {
+      "i": 191,
+      "n": "Notey.Tests.NoteDirectiveParserTests.Parse_strips_known_directive_lines_and_keeps_body",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteDirectiveParserTests.Parse_strips_known_directive_lines_and_keeps_body"
+    },
+    {
+      "i": 192,
+      "n": "Notey.Tests.NoteDirectiveParserTests.SlashCommandCompletionQuery_does_not_match_slash_inside_word",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteDirectiveParserTests.SlashCommandCompletionQuery_does_not_match_slash_inside_word"
+    },
+    {
+      "i": 193,
+      "n": "Notey.Tests.NoteDirectiveParserTests.SlashCommandCompletionQuery_ignores_document_start_before_leading_newline",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteDirectiveParserTests.SlashCommandCompletionQuery_ignores_document_start_before_leading_newline"
+    },
+    {
+      "i": 194,
+      "n": "Notey.Tests.NoteDirectiveParserTests.SlashCommandCompletionQuery_matches_command_at_line_start",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteDirectiveParserTests.SlashCommandCompletionQuery_matches_command_at_line_start"
+    },
+    {
+      "i": 195,
+      "n": "Notey.Tests.NoteDirectiveParserTests.SlashCommandParameterQuery_detects_task_due_date_trigger",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteDirectiveParserTests.SlashCommandParameterQuery_detects_task_due_date_trigger"
+    },
+    {
+      "i": 196,
+      "n": "Notey.Tests.NoteDirectiveParserTests.SlashCommandParameterQuery_ignores_document_start_before_leading_newline",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteDirectiveParserTests.SlashCommandParameterQuery_ignores_document_start_before_leading_newline"
+    },
+    {
+      "i": 197,
+      "n": "Notey.Tests.NoteDirectiveParserTests.SlashCommandParameterQuery_matches_parameter_after_command",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteDirectiveParserTests.SlashCommandParameterQuery_matches_parameter_after_command"
+    },
+    {
+      "i": 198,
+      "n": "Notey.Tests.NoteDraftStoreTests.CreateAsync_uses_suffix_when_timestamp_filename_already_exists",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteDraftStoreTests.CreateAsync_uses_suffix_when_timestamp_filename_already_exists"
+    },
+    {
+      "i": 199,
+      "n": "Notey.Tests.NoteDraftStoreTests.CreateAsync_writes_empty_draft_to_owned_draft_folder",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.CreateAsync_writes_empty_draft_to_owned_draft_folder"
+    },
+    {
+      "i": 200,
+      "n": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_does_nothing_when_draft_folder_does_not_exist",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_does_nothing_when_draft_folder_does_not_exist"
+    },
+    {
+      "i": 201,
+      "n": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_preserves_draft_files_with_content",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_preserves_draft_files_with_content"
+    },
+    {
+      "i": 202,
+      "n": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_removes_assets_for_empty_draft",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_removes_assets_for_empty_draft"
+    },
+    {
+      "i": 203,
+      "n": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_removes_orphaned_draft_assets",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_removes_orphaned_draft_assets"
+    },
+    {
+      "i": 204,
+      "n": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_removes_whitespace_only_draft_files",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.DeleteEmptyDraftsAsync_removes_whitespace_only_draft_files"
+    },
+    {
+      "i": 205,
+      "n": "Notey.Tests.NoteDraftStoreTests.FindMostRecentAsync_returns_latest_note_created_within_window",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.NoteDraftStoreTests.FindMostRecentAsync_returns_latest_note_created_within_window"
+    },
+    {
+      "i": 206,
+      "n": "Notey.Tests.NoteDraftStoreTests.FindMostRecentAsync_returns_null_when_notes_are_outside_window",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.NoteDraftStoreTests.FindMostRecentAsync_returns_null_when_notes_are_outside_window"
+    },
+    {
+      "i": 207,
+      "n": "Notey.Tests.NoteDraftStoreTests.ListRecentAsync_falls_back_to_filename_when_heading_is_missing",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.ListRecentAsync_falls_back_to_filename_when_heading_is_missing"
+    },
+    {
+      "i": 208,
+      "n": "Notey.Tests.NoteDraftStoreTests.ListRecentAsync_returns_last_week_notes_sorted_newest_first_with_titles",
+      "o": 0,
+      "d": 9,
+      "m": "Notey.Tests.NoteDraftStoreTests.ListRecentAsync_returns_last_week_notes_sorted_newest_first_with_titles"
+    },
+    {
+      "i": 209,
+      "n": "Notey.Tests.NoteDraftStoreTests.OpenAsync_does_not_read_created_from_note_body",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.OpenAsync_does_not_read_created_from_note_body"
+    },
+    {
+      "i": 210,
+      "n": "Notey.Tests.NoteDraftStoreTests.OpenAsync_reads_created_at_from_minute_resolution_filename_when_frontmatter_is_missing",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.NoteDraftStoreTests.OpenAsync_reads_created_at_from_minute_resolution_filename_when_frontmatter_is_missing"
+    },
+    {
+      "i": 211,
+      "n": "Notey.Tests.NoteDraftStoreTests.OpenAsync_reads_created_at_from_timestamp_filename_when_frontmatter_is_missing",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.OpenAsync_reads_created_at_from_timestamp_filename_when_frontmatter_is_missing"
+    },
+    {
+      "i": 212,
+      "n": "Notey.Tests.NoteDraftStoreTests.OpenAsync_reads_existing_note_draft",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.OpenAsync_reads_existing_note_draft"
+    },
+    {
+      "i": 213,
+      "n": "Notey.Tests.NoteDraftStoreTests.OpenAsync_rejects_paths_outside_notes_folder",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.OpenAsync_rejects_paths_outside_notes_folder"
+    },
+    {
+      "i": 214,
+      "n": "Notey.Tests.NoteDraftStoreTests.SaveAsync_updates_existing_draft_file",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteDraftStoreTests.SaveAsync_updates_existing_draft_file"
+    },
+    {
+      "i": 215,
+      "n": "Notey.Tests.NoteEditorStatusTests.FromText_counts_words_and_cursor_position",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteEditorStatusTests.FromText_counts_words_and_cursor_position"
+    },
+    {
+      "i": 216,
+      "n": "Notey.Tests.NoteMetadataFormatterTests.Apply_preserves_note_body_when_orphaned_context_has_no_blank_separator",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteMetadataFormatterTests.Apply_preserves_note_body_when_orphaned_context_has_no_blank_separator"
+    },
+    {
+      "i": 217,
+      "n": "Notey.Tests.NoteMetadataFormatterTests.Apply_removes_orphaned_context_start_marker",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteMetadataFormatterTests.Apply_removes_orphaned_context_start_marker"
+    },
+    {
+      "i": 218,
+      "n": "Notey.Tests.NoteMetadataFormatterTests.Apply_replaces_existing_generated_context_block",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteMetadataFormatterTests.Apply_replaces_existing_generated_context_block"
+    },
+    {
+      "i": 219,
+      "n": "Notey.Tests.NoteMetadataFormatterTests.Apply_updates_frontmatter_and_adds_context_block",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteMetadataFormatterTests.Apply_updates_frontmatter_and_adds_context_block"
+    },
+    {
+      "i": 220,
+      "n": "Notey.Tests.NoteMetadataFormatterTests.ReadFrontmatterInputs_parses_block_arrays_from_existing_frontmatter",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteMetadataFormatterTests.ReadFrontmatterInputs_parses_block_arrays_from_existing_frontmatter"
+    },
+    {
+      "i": 221,
+      "n": "Notey.Tests.NoteMetadataFormatterTests.ReadFrontmatterInputs_parses_inline_empty_arrays",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteMetadataFormatterTests.ReadFrontmatterInputs_parses_inline_empty_arrays"
+    },
+    {
+      "i": 222,
+      "n": "Notey.Tests.NoteMetadataFormatterTests.ReadFrontmatterInputs_returns_empty_arrays_for_note_without_frontmatter",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteMetadataFormatterTests.ReadFrontmatterInputs_returns_empty_arrays_for_note_without_frontmatter"
+    },
+    {
+      "i": 223,
+      "n": "Notey.Tests.NoteyAssistantTests.Parser_preserves_note_operation_whitespace",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteyAssistantTests.Parser_preserves_note_operation_whitespace"
+    },
+    {
+      "i": 224,
+      "n": "Notey.Tests.NoteyAssistantTests.Parser_reads_message_note_operations_and_task_operations",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.NoteyAssistantTests.Parser_reads_message_note_operations_and_task_operations"
+    },
+    {
+      "i": 225,
+      "n": "Notey.Tests.NoteyAssistantTests.Service_sends_current_note_and_tasks_to_configured_provider",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteyAssistantTests.Service_sends_current_note_and_tasks_to_configured_provider"
+    },
+    {
+      "i": 226,
+      "n": "Notey.Tests.NoteyAssistantTests.Validator_rejects_duplicate_task_operations_and_empty_set_due_date",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteyAssistantTests.Validator_rejects_duplicate_task_operations_and_empty_set_due_date"
+    },
+    {
+      "i": 227,
+      "n": "Notey.Tests.NoteyAssistantTests.Validator_rejects_inserts_at_replace_range_start",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteyAssistantTests.Validator_rejects_inserts_at_replace_range_start"
+    },
+    {
+      "i": 228,
+      "n": "Notey.Tests.NoteyAssistantTests.Validator_rejects_inserts_inside_replace_ranges",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteyAssistantTests.Validator_rejects_inserts_inside_replace_ranges"
+    },
+    {
+      "i": 229,
+      "n": "Notey.Tests.NoteyAssistantTests.Validator_rejects_overflowing_note_ranges",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteyAssistantTests.Validator_rejects_overflowing_note_ranges"
+    },
+    {
+      "i": 230,
+      "n": "Notey.Tests.NoteyAssistantTests.Validator_rejects_stale_note_ranges_without_muting_the_message",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteyAssistantTests.Validator_rejects_stale_note_ranges_without_muting_the_message"
+    },
+    {
+      "i": 231,
+      "n": "Notey.Tests.NoteyAssistantTests.Validator_rejects_task_updates_for_missing_ids",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteyAssistantTests.Validator_rejects_task_updates_for_missing_ids"
+    },
+    {
+      "i": 232,
+      "n": "Notey.Tests.NoteyAssistantTests.Validator_requires_expected_text_for_destructive_note_edits",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteyAssistantTests.Validator_requires_expected_text_for_destructive_note_edits"
+    },
+    {
+      "i": 233,
+      "n": "Notey.Tests.NoteyOptionsTests.Defaults_match_initial_product_decisions",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteyOptionsTests.Defaults_match_initial_product_decisions"
+    },
+    {
+      "i": 234,
+      "n": "Notey.Tests.NoteySettingsStoreTests.Save_only_writes_api_key_when_plaintext_storage_is_enabled",
+      "o": 0,
+      "d": 20,
+      "m": "Notey.Tests.NoteySettingsStoreTests.Save_only_writes_api_key_when_plaintext_storage_is_enabled"
+    },
+    {
+      "i": 235,
+      "n": "Notey.Tests.NoteySettingsStoreTests.Save_refreshes_ai_providers_with_injected_logger_factory",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.NoteySettingsStoreTests.Save_refreshes_ai_providers_with_injected_logger_factory"
+    },
+    {
+      "i": 236,
+      "n": "Notey.Tests.NoteySettingsStoreTests.Save_writes_local_settings_atomically_and_mutates_current_options",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.NoteySettingsStoreTests.Save_writes_local_settings_atomically_and_mutates_current_options"
+    },
+    {
+      "i": 237,
+      "n": "Notey.Tests.NoteySettingsStoreTests.Validate_rejects_invalid_hotkey_and_unapproved_plaintext_key",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.NoteySettingsStoreTests.Validate_rejects_invalid_hotkey_and_unapproved_plaintext_key"
+    },
+    {
+      "i": 238,
+      "n": "Notey.Tests.NoteySettingsStoreTests.Validate_rejects_unsupported_spellcheck_language",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.NoteySettingsStoreTests.Validate_rejects_unsupported_spellcheck_language"
+    },
+    {
+      "i": 239,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_on_content_lines",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_on_content_lines"
+    },
+    {
+      "i": 240,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.GIF\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.GIF\")"
+    },
+    {
+      "i": 241,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.JPEG\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.JPEG\")"
+    },
+    {
+      "i": 242,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.Jpg\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.Jpg\")"
+    },
+    {
+      "i": 243,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.PNG\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.PNG\")"
+    },
+    {
+      "i": 244,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.WebP\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_finds_image_embeds_with_uppercase_extensions(filename: \"photo.WebP\")"
+    },
+    {
+      "i": 245,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_ignores_embeds_inside_fenced_code_blocks",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_ignores_embeds_inside_fenced_code_blocks"
+    },
+    {
+      "i": 246,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_ignores_embeds_inside_inline_code",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_ignores_embeds_inside_inline_code"
+    },
+    {
+      "i": 247,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_ignores_non_image_embeds",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_ignores_non_image_embeds"
+    },
+    {
+      "i": 248,
+      "n": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_uses_first_image_embed_on_line_and_supports_aliases",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianImageEmbedIndexTests.Build_uses_first_image_embed_on_line_and_supports_aliases"
+    },
+    {
+      "i": 249,
+      "n": "Notey.Tests.ObsidianLinkBuilderTests.BuildImageEmbed_rejects_paths_outside_vault",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianLinkBuilderTests.BuildImageEmbed_rejects_paths_outside_vault"
+    },
+    {
+      "i": 250,
+      "n": "Notey.Tests.ObsidianLinkBuilderTests.BuildImageEmbed_uses_vault_relative_path_and_keeps_extension",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianLinkBuilderTests.BuildImageEmbed_uses_vault_relative_path_and_keeps_extension"
+    },
+    {
+      "i": 251,
+      "n": "Notey.Tests.ObsidianLinkBuilderTests.BuildOpenFileUri_rejects_paths_outside_vault",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianLinkBuilderTests.BuildOpenFileUri_rejects_paths_outside_vault"
+    },
+    {
+      "i": 252,
+      "n": "Notey.Tests.ObsidianLinkBuilderTests.BuildOpenFileUri_uses_vault_name_and_relative_file_path",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.ObsidianLinkBuilderTests.BuildOpenFileUri_uses_vault_name_and_relative_file_path"
+    },
+    {
+      "i": 253,
+      "n": "Notey.Tests.ObsidianLinkBuilderTests.BuildWikiLink_sanitizes_file_name_without_changing_alias",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.ObsidianLinkBuilderTests.BuildWikiLink_sanitizes_file_name_without_changing_alias"
+    },
+    {
+      "i": 254,
+      "n": "Notey.Tests.ObsidianLinkBuilderTests.BuildWikiLink_uses_configured_vault_relative_folder",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.ObsidianLinkBuilderTests.BuildWikiLink_uses_configured_vault_relative_folder"
+    },
+    {
+      "i": 255,
+      "n": "Notey.Tests.PeopleWikiLinkDisplayTests.Caret_adjacent_people_link_expands_to_raw_document_text",
+      "o": 0,
+      "d": 125,
+      "m": "Notey.Tests.PeopleWikiLinkDisplayTests.Caret_adjacent_people_link_expands_to_raw_document_text"
+    },
+    {
+      "i": 256,
+      "n": "Notey.Tests.PeopleWikiLinkDisplayTests.Collapsed_people_link_reports_absolute_caret_positions",
+      "o": 0,
+      "d": 130,
+      "m": "Notey.Tests.PeopleWikiLinkDisplayTests.Collapsed_people_link_reports_absolute_caret_positions"
+    },
+    {
+      "i": 257,
+      "n": "Notey.Tests.PeopleWikiLinkDisplayTests.Inactive_people_link_collapses_visually_without_changing_document_text",
+      "o": 0,
+      "d": 136,
+      "m": "Notey.Tests.PeopleWikiLinkDisplayTests.Inactive_people_link_collapses_visually_without_changing_document_text"
+    },
+    {
+      "i": 258,
+      "n": "Notey.Tests.PeopleWikiLinkIndexTests.Build_continues_after_unclosed_wiki_link_on_same_line",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PeopleWikiLinkIndexTests.Build_continues_after_unclosed_wiki_link_on_same_line"
+    },
+    {
+      "i": 259,
+      "n": "Notey.Tests.PeopleWikiLinkIndexTests.Build_ignores_links_in_fenced_code_and_inline_code",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PeopleWikiLinkIndexTests.Build_ignores_links_in_fenced_code_and_inline_code"
+    },
+    {
+      "i": 260,
+      "n": "Notey.Tests.PeopleWikiLinkIndexTests.Build_ignores_non_people_links_and_image_embeds",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PeopleWikiLinkIndexTests.Build_ignores_non_people_links_and_image_embeds"
+    },
+    {
+      "i": 261,
+      "n": "Notey.Tests.PeopleWikiLinkIndexTests.Build_returns_people_link_alias_span",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PeopleWikiLinkIndexTests.Build_returns_people_link_alias_span"
+    },
+    {
+      "i": 262,
+      "n": "Notey.Tests.PeopleWikiLinkIndexTests.Build_unescapes_alias_pipes",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PeopleWikiLinkIndexTests.Build_unescapes_alias_pipes"
+    },
+    {
+      "i": 263,
+      "n": "Notey.Tests.PeopleWikiLinkIndexTests.Build_uses_people_path_file_name_without_alias",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.PeopleWikiLinkIndexTests.Build_uses_people_path_file_name_without_alias"
+    },
+    {
+      "i": 264,
+      "n": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_normalizes_person_names(input: \"  jane   doe  \", expected: \"Jane Doe\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_normalizes_person_names(input: \"  jane   doe  \", expected: \"Jane Doe\")"
+    },
+    {
+      "i": 265,
+      "n": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_normalizes_person_names(input: \"james simpson\", expected: \"James Simpson\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_normalizes_person_names(input: \"james simpson\", expected: \"James Simpson\")"
+    },
+    {
+      "i": 266,
+      "n": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_normalizes_person_names(input: \"MARY ANN SMITH\", expected: \"Mary Ann Smith\")",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_normalizes_person_names(input: \"MARY ANN SMITH\", expected: \"Mary Ann Smith\")"
+    },
+    {
+      "i": 267,
+      "n": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_rejects_blank_names",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PersonDisplayNameFormatterTests.ToTitleCase_rejects_blank_names"
+    },
+    {
+      "i": 268,
+      "n": "Notey.Tests.PersonReferenceCompletionQueryTests.TryCreate_ignores_email_addresses",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.PersonReferenceCompletionQueryTests.TryCreate_ignores_email_addresses"
+    },
+    {
+      "i": 269,
+      "n": "Notey.Tests.PersonReferenceCompletionQueryTests.TryCreate_ignores_previous_line_references",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PersonReferenceCompletionQueryTests.TryCreate_ignores_previous_line_references"
+    },
+    {
+      "i": 270,
+      "n": "Notey.Tests.PersonReferenceCompletionQueryTests.TryCreate_returns_query_for_person_reference_on_current_line",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.PersonReferenceCompletionQueryTests.TryCreate_returns_query_for_person_reference_on_current_line"
+    },
+    {
+      "i": 271,
+      "n": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_cleanup_block_replaces_previous_generated_cleanup",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_cleanup_block_replaces_previous_generated_cleanup"
+    },
+    {
+      "i": 272,
+      "n": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_cleanup_block_throws_for_null_heading",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_cleanup_block_throws_for_null_heading"
+    },
+    {
+      "i": 273,
+      "n": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_input_excludes_frontmatter_context_and_prior_ai_cleanup",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_input_excludes_frontmatter_context_and_prior_ai_cleanup"
+    },
+    {
+      "i": 274,
+      "n": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_pipeline_returns_reviewable_structured_suggestions",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase10OrganizationAssistanceTests.Organization_pipeline_returns_reviewable_structured_suggestions"
+    },
+    {
+      "i": 275,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.App_project_configures_windows_native_tesseract_binaries_for_publish",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.App_project_configures_windows_native_tesseract_binaries_for_publish"
+    },
+    {
+      "i": 276,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.App_registers_Velopack_startup_hook_without_update_prompting",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.App_registers_Velopack_startup_hook_without_update_prompting"
+    },
+    {
+      "i": 277,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.App_uses_resource_backed_icons",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.App_uses_resource_backed_icons"
+    },
+    {
+      "i": 278,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Ci_workflow_builds_tests_and_can_publish_windows_artifact",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Ci_workflow_builds_tests_and_can_publish_windows_artifact"
+    },
+    {
+      "i": 279,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_command_parses_optional_output_path",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_command_parses_optional_output_path"
+    },
+    {
+      "i": 280,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_report_counts_environment_api_key_without_printing_value",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_report_counts_environment_api_key_without_printing_value"
+    },
+    {
+      "i": 281,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_report_default_filename_uses_injected_time_provider",
+      "o": 0,
+      "d": 9,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_report_default_filename_uses_injected_time_provider"
+    },
+    {
+      "i": 282,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_report_redacts_api_keys",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Diagnostics_report_redacts_api_keys"
+    },
+    {
+      "i": 283,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Docusaurus_docs_have_frontmatter_and_category_files_are_valid_json",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Docusaurus_docs_have_frontmatter_and_category_files_are_valid_json"
+    },
+    {
+      "i": 284,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.MinVer_versioning_is_configured_for_v_prefixed_release_tags",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.MinVer_versioning_is_configured_for_v_prefixed_release_tags"
+    },
+    {
+      "i": 285,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Publish_profile_uses_single_file_self_contained_windows_settings",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Publish_profile_uses_single_file_self_contained_windows_settings"
+    },
+    {
+      "i": 286,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Release_workflow_builds_tests_packages_and_publishes_v_tag_releases",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Release_workflow_builds_tests_packages_and_publishes_v_tag_releases"
+    },
+    {
+      "i": 287,
+      "n": "Notey.Tests.Phase11PackagingHardeningTests.Windows_packaging_script_uses_Velopack_installer_assets",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.Phase11PackagingHardeningTests.Windows_packaging_script_uses_Velopack_installer_assets"
+    },
+    {
+      "i": 288,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Ai_parser_ignores_non_string_values_for_string_fields",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Ai_parser_ignores_non_string_values_for_string_fields"
+    },
+    {
+      "i": 289,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Ai_parser_reads_fenced_json_and_entity_suggestions",
+      "o": 0,
+      "d": 10,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Ai_parser_reads_fenced_json_and_entity_suggestions"
+    },
+    {
+      "i": 290,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Ai_parser_rejects_malformed_responses",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Ai_parser_rejects_malformed_responses"
+    },
+    {
+      "i": 291,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Ai_structured_extraction_accepts_ocr_text_and_preserves_optional_raw_output",
+      "o": 0,
+      "d": 14,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Ai_structured_extraction_accepts_ocr_text_and_preserves_optional_raw_output"
+    },
+    {
+      "i": 292,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Ai_structured_extraction_surfaces_invalid_json_as_pipeline_error",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Ai_structured_extraction_surfaces_invalid_json_as_pipeline_error"
+    },
+    {
+      "i": 293,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Markdown_assembly_step_outputs_markdown_ready_structured_content",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Markdown_assembly_step_outputs_markdown_ready_structured_content"
+    },
+    {
+      "i": 294,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_entry_inherits_reasoning_model_from_global_options",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_entry_inherits_reasoning_model_from_global_options"
+    },
+    {
+      "i": 295,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_factory_uses_environment_api_key_when_config_is_blank",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_factory_uses_environment_api_key_when_config_is_blank"
+    },
+    {
+      "i": 296,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_factory_uses_global_api_key_for_provider_when_provider_key_is_blank",
+      "o": 0,
+      "d": 12,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_factory_uses_global_api_key_for_provider_when_provider_key_is_blank"
+    },
+    {
+      "i": 297,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_omits_temperature_and_uses_max_completion_tokens_for_reasoning_model",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_omits_temperature_and_uses_max_completion_tokens_for_reasoning_model"
+    },
+    {
+      "i": 298,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_sends_temperature_and_max_tokens_for_standard_model",
+      "o": 0,
+      "d": 56,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Open_ai_provider_sends_temperature_and_max_tokens_for_standard_model"
+    },
+    {
+      "i": 299,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Tesseract_bundled_languages_includes_eng",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Tesseract_bundled_languages_includes_eng"
+    },
+    {
+      "i": 300,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_does_not_error_for_non_bundled_language_when_data_path_is_configured",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_does_not_error_for_non_bundled_language_when_data_path_is_configured"
+    },
+    {
+      "i": 301,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_trims_string_configuration_values",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_trims_string_configuration_values"
+    },
+    {
+      "i": 302,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_uses_configured_ocr_options_and_enriches_context",
+      "o": 0,
+      "d": 39,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_uses_configured_ocr_options_and_enriches_context"
+    },
+    {
+      "i": 303,
+      "n": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_validates_non_bundled_language_without_data_path",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.Phase8PipelineStepTests.Tesseract_step_validates_non_bundled_language_without_data_path"
+    },
+    {
+      "i": 304,
+      "n": "Notey.Tests.PipelineFoundationTests.Catalog_reports_duplicate_pipeline_ids_without_throwing",
+      "o": 0,
+      "d": 19,
+      "m": "Notey.Tests.PipelineFoundationTests.Catalog_reports_duplicate_pipeline_ids_without_throwing"
+    },
+    {
+      "i": 305,
+      "n": "Notey.Tests.PipelineFoundationTests.Catalog_returns_only_enabled_valid_compatible_pipelines",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.PipelineFoundationTests.Catalog_returns_only_enabled_valid_compatible_pipelines"
+    },
+    {
+      "i": 306,
+      "n": "Notey.Tests.PipelineFoundationTests.ExecuteAsync_reports_pipeline_execution_exception_messages_in_progress",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.PipelineFoundationTests.ExecuteAsync_reports_pipeline_execution_exception_messages_in_progress"
+    },
+    {
+      "i": 307,
+      "n": "Notey.Tests.PipelineFoundationTests.ExecuteAsync_runs_valid_chain_and_preserves_context_enrichment",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.PipelineFoundationTests.ExecuteAsync_runs_valid_chain_and_preserves_context_enrichment"
+    },
+    {
+      "i": 308,
+      "n": "Notey.Tests.PipelineFoundationTests.ExecuteAsync_validates_blank_pipeline_id_before_creating_context",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.PipelineFoundationTests.ExecuteAsync_validates_blank_pipeline_id_before_creating_context"
+    },
+    {
+      "i": 309,
+      "n": "Notey.Tests.PipelineFoundationTests.File_source_reports_null_pipeline_entries_as_warnings",
+      "o": 0,
+      "d": 29,
+      "m": "Notey.Tests.PipelineFoundationTests.File_source_reports_null_pipeline_entries_as_warnings"
+    },
+    {
+      "i": 310,
+      "n": "Notey.Tests.PipelineFoundationTests.File_source_reports_warning_when_pipeline_file_is_missing",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.PipelineFoundationTests.File_source_reports_warning_when_pipeline_file_is_missing"
+    },
+    {
+      "i": 311,
+      "n": "Notey.Tests.PipelineFoundationTests.File_source_reports_warning_when_pipeline_json_is_malformed",
+      "o": 0,
+      "d": 7,
+      "m": "Notey.Tests.PipelineFoundationTests.File_source_reports_warning_when_pipeline_json_is_malformed"
+    },
+    {
+      "i": 312,
+      "n": "Notey.Tests.PipelineFoundationTests.Generic_multi_input_step_rejects_direct_calls_with_unaccepted_data_type",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.PipelineFoundationTests.Generic_multi_input_step_rejects_direct_calls_with_unaccepted_data_type"
+    },
+    {
+      "i": 313,
+      "n": "Notey.Tests.PipelineFoundationTests.Generic_step_preserves_progress_message",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.PipelineFoundationTests.Generic_step_preserves_progress_message"
+    },
+    {
+      "i": 314,
+      "n": "Notey.Tests.PipelineFoundationTests.Generic_step_rejects_mismatched_enum_and_clr_contracts",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.PipelineFoundationTests.Generic_step_rejects_mismatched_enum_and_clr_contracts"
+    },
+    {
+      "i": 315,
+      "n": "Notey.Tests.PipelineFoundationTests.Multi_input_step_can_accept_text_or_ocr_text",
+      "o": 0,
+      "d": 11,
+      "m": "Notey.Tests.PipelineFoundationTests.Multi_input_step_can_accept_text_or_ocr_text"
+    },
+    {
+      "i": 316,
+      "n": "Notey.Tests.PipelineFoundationTests.Validate_rejects_incompatible_step_chain",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.PipelineFoundationTests.Validate_rejects_incompatible_step_chain"
+    },
+    {
+      "i": 317,
+      "n": "Notey.Tests.PipelineFoundationTests.Validate_rejects_missing_step_sequence",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PipelineFoundationTests.Validate_rejects_missing_step_sequence"
+    },
+    {
+      "i": 318,
+      "n": "Notey.Tests.PipelineFoundationTests.Validate_rejects_non_note_ready_final_output",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.PipelineFoundationTests.Validate_rejects_non_note_ready_final_output"
+    },
+    {
+      "i": 319,
+      "n": "Notey.Tests.PipelineFoundationTests.Validate_reports_null_step_entries_without_throwing",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.PipelineFoundationTests.Validate_reports_null_step_entries_without_throwing"
+    },
+    {
+      "i": 320,
+      "n": "Notey.Tests.RecentNoteChoiceTests.CreateRecentNoteCardContent_returns_placeholder_for_null_note",
+      "o": 0,
+      "d": 53,
+      "m": "Notey.Tests.RecentNoteChoiceTests.CreateRecentNoteCardContent_returns_placeholder_for_null_note"
+    },
+    {
+      "i": 321,
+      "n": "Notey.Tests.RecentNoteChoiceTests.FilterRecentNotes_matches_note_contents_and_preserves_order",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.RecentNoteChoiceTests.FilterRecentNotes_matches_note_contents_and_preserves_order"
+    },
+    {
+      "i": 322,
+      "n": "Notey.Tests.RecentNoteChoiceTests.FilterRecentNotes_returns_only_matching_notes",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.RecentNoteChoiceTests.FilterRecentNotes_returns_only_matching_notes"
+    },
+    {
+      "i": 323,
+      "n": "Notey.Tests.RecentNoteChoiceTests.FormatUpdatedLabel_converts_utc_timestamp_to_local_time",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.RecentNoteChoiceTests.FormatUpdatedLabel_converts_utc_timestamp_to_local_time"
+    },
+    {
+      "i": 324,
+      "n": "Notey.Tests.RecentNoteChoiceTests.FromDialogResult_preserves_a_real_choice",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.RecentNoteChoiceTests.FromDialogResult_preserves_a_real_choice"
+    },
+    {
+      "i": 325,
+      "n": "Notey.Tests.RecentNoteChoiceTests.FromDialogResult_returns_cancel_when_dialog_result_is_null",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.RecentNoteChoiceTests.FromDialogResult_returns_cancel_when_dialog_result_is_null"
+    },
+    {
+      "i": 326,
+      "n": "Notey.Tests.RecentNoteChoiceTests.GetPreferredSelectedIndex_defaults_to_first_match_or_none(filteredCount: 0, expectedIndex: -1)",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.RecentNoteChoiceTests.GetPreferredSelectedIndex_defaults_to_first_match_or_none(filteredCount: 0, expectedIndex: -1)"
+    },
+    {
+      "i": 327,
+      "n": "Notey.Tests.RecentNoteChoiceTests.GetPreferredSelectedIndex_defaults_to_first_match_or_none(filteredCount: 1, expectedIndex: 0)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.RecentNoteChoiceTests.GetPreferredSelectedIndex_defaults_to_first_match_or_none(filteredCount: 1, expectedIndex: 0)"
+    },
+    {
+      "i": 328,
+      "n": "Notey.Tests.RecentNoteChoiceTests.GetPreferredSelectedIndex_defaults_to_first_match_or_none(filteredCount: 3, expectedIndex: 0)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.RecentNoteChoiceTests.GetPreferredSelectedIndex_defaults_to_first_match_or_none(filteredCount: 3, expectedIndex: 0)"
+    },
+    {
+      "i": 329,
+      "n": "Notey.Tests.RecentNoteChoiceTests.ShouldCloseOnDeactivate_requires_activation_and_no_explicit_choice(hasActivated: False, hasDialogResult: False, shouldClose: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.RecentNoteChoiceTests.ShouldCloseOnDeactivate_requires_activation_and_no_explicit_choice(hasActivated: False, hasDialogResult: False, shouldClose: False)"
+    },
+    {
+      "i": 330,
+      "n": "Notey.Tests.RecentNoteChoiceTests.ShouldCloseOnDeactivate_requires_activation_and_no_explicit_choice(hasActivated: True, hasDialogResult: False, shouldClose: True)",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.RecentNoteChoiceTests.ShouldCloseOnDeactivate_requires_activation_and_no_explicit_choice(hasActivated: True, hasDialogResult: False, shouldClose: True)"
+    },
+    {
+      "i": 331,
+      "n": "Notey.Tests.RecentNoteChoiceTests.ShouldCloseOnDeactivate_requires_activation_and_no_explicit_choice(hasActivated: True, hasDialogResult: True, shouldClose: False)",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.RecentNoteChoiceTests.ShouldCloseOnDeactivate_requires_activation_and_no_explicit_choice(hasActivated: True, hasDialogResult: True, shouldClose: False)"
+    },
+    {
+      "i": 332,
+      "n": "Notey.Tests.RecentNoteChoiceTests.ShouldOpenSelectedNote_requires_selection",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.RecentNoteChoiceTests.ShouldOpenSelectedNote_requires_selection"
+    },
+    {
+      "i": 333,
+      "n": "Notey.Tests.RecentNotesTests.OrderByMostRecent_applies_max_count_after_sorting",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.RecentNotesTests.OrderByMostRecent_applies_max_count_after_sorting"
+    },
+    {
+      "i": 334,
+      "n": "Notey.Tests.RecentNotesTests.OrderByMostRecent_sorts_descending",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.RecentNotesTests.OrderByMostRecent_sorts_descending"
+    },
+    {
+      "i": 335,
+      "n": "Notey.Tests.SpellcheckEditorIntegrationTests.Editor_attaches_spellcheck_transformer",
+      "o": 0,
+      "d": 1191,
+      "m": "Notey.Tests.SpellcheckEditorIntegrationTests.Editor_attaches_spellcheck_transformer"
+    },
+    {
+      "i": 336,
+      "n": "Notey.Tests.TaskStoreTests.Grouper_orders_tasks_by_due_date_sections",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.TaskStoreTests.Grouper_orders_tasks_by_due_date_sections"
+    },
+    {
+      "i": 337,
+      "n": "Notey.Tests.TaskStoreTests.Store_adds_source_link_and_source_note_backlink",
+      "o": 0,
+      "d": 6,
+      "m": "Notey.Tests.TaskStoreTests.Store_adds_source_link_and_source_note_backlink"
+    },
+    {
+      "i": 338,
+      "n": "Notey.Tests.TaskStoreTests.Store_only_treats_trailing_due_metadata_as_due_date",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.TaskStoreTests.Store_only_treats_trailing_due_metadata_as_due_date"
+    },
+    {
+      "i": 339,
+      "n": "Notey.Tests.TaskStoreTests.Store_parses_legacy_tasks_and_persists_stable_id_when_updated",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.TaskStoreTests.Store_parses_legacy_tasks_and_persists_stable_id_when_updated"
+    },
+    {
+      "i": 340,
+      "n": "Notey.Tests.TaskStoreTests.Store_rejects_task_text_that_would_be_reparsed_as_metadata",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.TaskStoreTests.Store_rejects_task_text_that_would_be_reparsed_as_metadata"
+    },
+    {
+      "i": 341,
+      "n": "Notey.Tests.TaskStoreTests.Store_updates_task_text_and_due_date_together",
+      "o": 0,
+      "d": 5,
+      "m": "Notey.Tests.TaskStoreTests.Store_updates_task_text_and_due_date_together"
+    },
+    {
+      "i": 342,
+      "n": "Notey.Tests.TeamsPipelineTests.Ai_parser_accepts_teams_aliases_for_participants_and_sections",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.TeamsPipelineTests.Ai_parser_accepts_teams_aliases_for_participants_and_sections"
+    },
+    {
+      "i": 343,
+      "n": "Notey.Tests.TeamsPipelineTests.Teams_normalizer_promotes_only_confident_participants",
+      "o": 0,
+      "d": 6,
+      "m": "Notey.Tests.TeamsPipelineTests.Teams_normalizer_promotes_only_confident_participants"
+    },
+    {
+      "i": 344,
+      "n": "Notey.Tests.TeamsPipelineTests.Teams_normalizer_rejects_invalid_confidence_threshold",
+      "o": 0,
+      "d": 1,
+      "m": "Notey.Tests.TeamsPipelineTests.Teams_normalizer_rejects_invalid_confidence_threshold"
+    },
+    {
+      "i": 345,
+      "n": "Notey.Tests.TeamsPipelineTests.Teams_pipeline_round_trip_keeps_uncertain_participants_out_of_metadata_people",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.TeamsPipelineTests.Teams_pipeline_round_trip_keeps_uncertain_participants_out_of_metadata_people"
+    },
+    {
+      "i": 346,
+      "n": "Notey.Tests.VaultBootstrapServiceTests.BootstrapAsync_creates_owned_folders_and_fixed_structure",
+      "o": 0,
+      "d": 7,
+      "m": "Notey.Tests.VaultBootstrapServiceTests.BootstrapAsync_creates_owned_folders_and_fixed_structure"
+    },
+    {
+      "i": 347,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_allows_concurrent_person_creation_for_same_name",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_allows_concurrent_person_creation_for_same_name"
+    },
+    {
+      "i": 348,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_creates_missing_person_document",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_creates_missing_person_document"
+    },
+    {
+      "i": 349,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_quotes_yaml_title_values",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_quotes_yaml_title_values"
+    },
+    {
+      "i": 350,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_escaped_yaml_title_match",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_escaped_yaml_title_match"
+    },
+    {
+      "i": 351,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_existing_alias_match",
+      "o": 0,
+      "d": 4,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_existing_alias_match"
+    },
+    {
+      "i": 352,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_existing_person_when_multi_part_name_order_differs",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_existing_person_when_multi_part_name_order_differs"
+    },
+    {
+      "i": 353,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_existing_person_when_two_part_name_order_differs",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_existing_person_when_two_part_name_order_differs"
+    },
+    {
+      "i": 354,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_sanitized_collision_when_existing_title_matches",
+      "o": 0,
+      "d": 2,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_reuses_sanitized_collision_when_existing_title_matches"
+    },
+    {
+      "i": 355,
+      "n": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_uses_suffix_when_sanitized_file_name_collides_with_different_entity",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.VaultEntityStoreTests.EnsureAsync_uses_suffix_when_sanitized_file_name_collides_with_different_entity"
+    },
+    {
+      "i": 356,
+      "n": "Notey.Tests.VaultEntityStoreTests.GetAllAsync_reads_titles_and_aliases_from_frontmatter",
+      "o": 0,
+      "d": 3,
+      "m": "Notey.Tests.VaultEntityStoreTests.GetAllAsync_reads_titles_and_aliases_from_frontmatter"
+    },
+    {
+      "i": 357,
+      "n": "Notey.Tests.VaultWorkspaceTests.GetPaths_derives_owned_paths_from_absolute_root",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.VaultWorkspaceTests.GetPaths_derives_owned_paths_from_absolute_root"
+    },
+    {
+      "i": 358,
+      "n": "Notey.Tests.VaultWorkspaceTests.GetPaths_derives_owned_vault_paths",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.VaultWorkspaceTests.GetPaths_derives_owned_vault_paths"
+    },
+    {
+      "i": 359,
+      "n": "Notey.Tests.VaultWorkspaceTests.GetPaths_resolves_defaults_against_stable_documents_location",
+      "o": 0,
+      "d": 0,
+      "m": "Notey.Tests.VaultWorkspaceTests.GetPaths_resolves_defaults_against_stable_documents_location"
+    }
+  ],
+  "failures": [],
+  "links": {
+    "workflowUrl": "https://github.com/mzbrau/notey/actions/runs/28976074895",
+    "commitUrl": "https://github.com/mzbrau/notey/commit/86fa20ec5aa48bbf0450569cf250bddcaf0ff150",
+    "prUrl": "https://github.com/mzbrau/notey/pull/51",
+    "jobUrl": "https://github.com/mzbrau/notey/actions/runs/28976074895/job/85983451035"
+  }
+}
