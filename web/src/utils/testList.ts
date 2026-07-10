@@ -1,5 +1,5 @@
 import type { CompactTestRecord, TestHistoryEntry } from '@actions-insights/history-models';
-import { CODE_TO_OUTCOME } from '@actions-insights/history-models';
+import { CODE_TO_OUTCOME, deriveClassNameFromCompactRecord } from '@actions-insights/history-models';
 
 export type TestSortBy = 'default' | 'name' | 'duration' | 'outcome' | 'passRate';
 export type TestFilterKey = 'failed' | 'passed' | 'skipped' | 'slow' | 'new';
@@ -19,10 +19,7 @@ export function getCodeSearchName(test: CompactTestRecord): string {
 }
 
 export function getClassName(test: CompactTestRecord): string {
-  if (test.ns && test.c) return `${test.ns}.${test.c}`;
-  const n = test.n || '';
-  const lastDot = n.lastIndexOf('.');
-  return lastDot > 0 ? n.slice(0, lastDot) : n;
+  return deriveClassNameFromCompactRecord(test);
 }
 
 export function getProjectName(test: CompactTestRecord): string {
@@ -121,4 +118,30 @@ export function getPassRateFromTrends(
   const entry = trends?.[fullName];
   if (!entry) return null;
   return { rate: entry.passRate, count: entry.runCount };
+}
+
+export function getShortNameFromFullName(fullName: string): string {
+  const lastDot = fullName.lastIndexOf('.');
+  return lastDot >= 0 ? fullName.slice(lastDot + 1) : fullName;
+}
+
+export function getClassNameFromFullName(fullName: string): string {
+  const lastDot = fullName.lastIndexOf('.');
+  return lastDot >= 0 ? fullName.slice(0, lastDot) : '—';
+}
+
+export function getProblematicTests(
+  trends: Record<string, TestHistoryEntry> | null,
+  threshold: number,
+): Array<{ name: string; entry: TestHistoryEntry }> {
+  if (!trends) return [];
+
+  return Object.entries(trends)
+    .filter(([, entry]) => entry.runCount > 0 && entry.passRate < threshold)
+    .map(([name, entry]) => ({ name, entry }))
+    .sort((a, b) => {
+      const rateDiff = a.entry.passRate - b.entry.passRate;
+      if (rateDiff !== 0) return rateDiff;
+      return a.name.localeCompare(b.name);
+    });
 }
