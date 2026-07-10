@@ -4,11 +4,15 @@ import {
   buildCodeSearchUrl,
   filterTests,
   getClassName,
+  getClassNameFromFullName,
   getCodeSearchName,
+  getProblematicTests,
   getShortName,
+  getShortNameFromFullName,
   groupTestsByProjectAndClass,
   sortTests,
 } from './testList';
+import type { TestHistoryEntry } from '@actions-insights/history-models';
 
 function makeTest(overrides: Partial<CompactTestRecord> = {}): CompactTestRecord {
   return {
@@ -29,7 +33,7 @@ describe('testList', () => {
     const test = makeTest();
     expect(getShortName(test)).toBe('ShouldPass');
     expect(getCodeSearchName(test)).toBe('ShouldPass');
-    expect(getClassName(test)).toBe('SampleTests.SampleTests');
+    expect(getClassName(test)).toBe('MyProject.SampleTests');
   });
 
   it('builds GitHub code search URL', () => {
@@ -69,6 +73,39 @@ describe('testList', () => {
     expect(grouped.get('MyProject')?.get('Foo.Bar')).toHaveLength(2);
   });
 
+  it('groups tests by method-aware class name when m is present', () => {
+    const className = 'Fig.Unit.Test.DistributedLockTests';
+    const tests = [
+      makeTest({
+        a: undefined,
+        n: `${className}.AcquireLockAsync_ShouldHandleHighConcurrency`,
+        m: 'AcquireLockAsync_ShouldHandleHighConcurrency',
+        ns: 'Fig.Unit.Test',
+        c: 'DistributedLockTests',
+      }),
+      makeTest({
+        i: 1,
+        a: undefined,
+        n: `${className}.AcquireLockAsync_ShouldReleaseLockOnDispose`,
+        m: 'AcquireLockAsync_ShouldReleaseLockOnDispose',
+        ns: 'Fig.Unit.Test',
+        c: 'DistributedLockTests',
+      }),
+    ];
+    const grouped = groupTestsByProjectAndClass(tests);
+    expect(grouped.get('—')?.get(className)).toHaveLength(2);
+  });
+
+  it('uses method suffix instead of last dot when method contains dots', () => {
+    const test = makeTest({
+      n: 'Namespace.Class.part1.part2',
+      m: 'part1.part2',
+      ns: 'Namespace',
+      c: 'Class',
+    });
+    expect(getClassName(test)).toBe('Namespace.Class');
+  });
+
   it('sorts by duration descending', () => {
     const tests = [
       makeTest({ d: 100 }),
@@ -76,5 +113,29 @@ describe('testList', () => {
     ];
     const sorted = sortTests(tests, 'duration', () => null);
     expect(sorted[0].d).toBe(500);
+  });
+
+  it('derives short and class names from full test name', () => {
+    expect(getShortNameFromFullName('SampleTests.ShouldPass')).toBe('ShouldPass');
+    expect(getClassNameFromFullName('SampleTests.ShouldPass')).toBe('SampleTests');
+  });
+
+  it('returns problematic tests below threshold sorted worst-first', () => {
+    const trends: Record<string, TestHistoryEntry> = {
+      'A.Pass': { passRate: 100, runCount: 5, points: [] },
+      'B.Fail': { passRate: 0, runCount: 3, points: [] },
+      'C.Flaky': { passRate: 80, runCount: 10, points: [] },
+      'D.SkipOnly': { passRate: 0, runCount: 0, points: [] },
+      'E.Edge': { passRate: 95, runCount: 20, points: [] },
+    };
+
+    const result = getProblematicTests(trends, 95);
+    expect(result.map((t) => t.name)).toEqual(['B.Fail', 'C.Flaky']);
+    expect(result[0].entry.passRate).toBe(0);
+  });
+
+  it('returns empty array for null or empty trends', () => {
+    expect(getProblematicTests(null, 95)).toEqual([]);
+    expect(getProblematicTests({}, 95)).toEqual([]);
   });
 });
