@@ -1157,16 +1157,18 @@ code, pre, .mono { font-family: var(--font-mono); font-size: 13px; }
 .duration-trend-bar-area {
   flex: 1;
   min-height: 0;
+  width: 100%;
   display: flex;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   gap: 10px;
   overflow: visible;
 }
 
 .duration-trend-bar {
-  flex: 0 0 auto;
-  width: 42px;
+  flex: 1 1 42px;
+  min-width: 32px;
+  max-width: 64px;
   height: 100%;
   min-height: 0;
   display: flex;
@@ -1536,4 +1538,391 @@ code, pre, .mono { font-family: var(--font-mono); font-size: 13px; }
 .stat-hint.positive { color: var(--color-passed); }
 .stat-hint.negative { color: var(--color-failed); }
 .stat-hint.neutral { color: var(--on-surface-variant); }
-.coverage-trend-chart .coverage-trend-bar { background: var(--color-primary) !important; }
+.chart-card-trend {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card-trend .chart-wrap {
+  height: 280px;
+  min-height: 280px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+.chart-card-trend .duration-trend-chart {
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.chart-card-trend .duration-trend-bar-area {
+  flex: 1;
+  min-height: 0;
+}
+
+.build-insights-panel .chart-card-trend + .chart-card-trend,
+.tab-panel .chart-card-trend + .chart-card-trend {
+  margin-top: 16px;
+}
+
+.coverage-trend-chart .duration-trend-bar-fill {
+  background: var(--color-primary) !important;
+}
+
+.coverage-package-item {
+  margin: 8px 0 0 12px;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+}
+
+.coverage-package-summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.coverage-project-loading {
+  margin: 8px 0 0 12px;
+  font-size: 13px;
+}
+
+.coverage-files-toggle {
+  margin-top: 16px;
+}
+
+/* Build insights */
+.build-insights-panel .build-insights-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.build-insight-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-md);
+  min-width: 140px;
+}
+
+.build-insight-stat-label {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+}
+
+.build-insight-stat-value {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.diagnostics-stacked-track {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.build-summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.build-summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 20px;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-md);
+  min-width: 100px;
+}
+
+.build-summary-card--wide {
+  min-width: 200px;
+  flex: 1;
+}
+
+.build-summary-card--error .build-summary-card-value {
+  color: var(--error);
+}
+
+.build-summary-card--warning .build-summary-card-value {
+  color: var(--color-warning, #913900);
+}
+
+.build-summary-card-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.build-summary-card-value--small {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.build-summary-card-label {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  margin-top: 4px;
+}
+
+.workflow-step-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workflow-step-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) 2fr auto;
+  gap: 12px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.workflow-step-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.workflow-step-job {
+  font-size: 11px;
+  color: var(--on-surface-variant);
+}
+
+.workflow-step-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.workflow-step-bar-track {
+  height: 8px;
+  background: var(--surface-container-high);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.workflow-step-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+.workflow-step-duration {
+  font-variant-numeric: tabular-nums;
+  color: var(--on-surface-variant);
+}
+
+.workflow-runner-meta,
+.diagnostic-truncated-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--on-surface-variant);
+}
+
+.action-phases-details {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.diagnostic-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chart-card:has(.diagnostic-browser) .chart-wrap {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 320px;
+}
+
+.diagnostic-browser {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 280px;
+}
+
+.diagnostic-browser-panes {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .diagnostic-browser-panes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diagnostic-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+  overflow-y: auto;
+  max-height: 360px;
+  min-height: 200px;
+}
+
+.diagnostic-file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  transition: background var(--transition);
+}
+
+.diagnostic-file-row:hover {
+  background: var(--surface-container-high);
+}
+
+.diagnostic-file-row.active {
+  background: var(--surface-container);
+  outline: 1px solid var(--outline-variant);
+}
+
+.diagnostic-file-path {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.diagnostic-file-badges {
+  display: flex;
+  flex-shrink: 0;
+  gap: 4px;
+}
+
+.diagnostic-count-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+
+.diagnostic-count-badge--error {
+  color: var(--error);
+  background: var(--error-container);
+}
+
+.diagnostic-count-badge--warning {
+  color: var(--color-warning, #913900);
+  background: color-mix(in srgb, var(--color-warning, #913900) 12%, transparent);
+}
+
+.diagnostic-count-badge--note {
+  color: var(--on-surface-variant);
+  background: var(--surface-container-high);
+}
+
+.diagnostic-detail-panel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-sm);
+  min-height: 200px;
+  max-height: 360px;
+  overflow: hidden;
+}
+
+.diagnostic-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.diagnostic-detail-header code {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.diagnostic-detail-panel .diagnostic-item-list {
+  flex: 1;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0 12px 12px;
+}
+
+.diagnostic-item-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.diagnostic-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px 0;
+  border-top: 1px solid var(--outline-variant);
+  font-size: 13px;
+}
+
+.diagnostic-item--error .diagnostic-item-severity {
+  color: var(--error);
+}
+
+.diagnostic-item--warning .diagnostic-item-severity {
+  color: var(--color-warning, #913900);
+}
+
+.diagnostic-item-severity {
+  font-weight: 600;
+  text-transform: capitalize;
+  min-width: 56px;
+}
+
+.diagnostic-item-code {
+  font-size: 12px;
+}
+
+.diagnostic-item-message {
+  flex: 1 1 100%;
+}
