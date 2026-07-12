@@ -7,6 +7,7 @@ import { DurationTrendChart } from './DurationTrendChart';
 import { RunTrendsChart } from './RunTrendsChart';
 import { StackedBarChart } from './StackedBarChart';
 import { WorkflowDurationTrendChart } from './WorkflowDurationTrendChart';
+import { BUILD_PERFORMANCE_MAX_RUNS } from '../../utils/chart';
 import type { EnrichedRun } from '../../utils/repositoryRuns';
 
 const sampleRun = (overrides: Partial<EnrichedRun> = {}): EnrichedRun => ({
@@ -63,48 +64,83 @@ describe('StackedBarChart', () => {
 });
 
 describe('CoverageTrendChart', () => {
-  it('renders empty state when no points', () => {
-    render(<CoverageTrendChart points={[]} />);
+  const coverageRun = (overrides: Partial<EnrichedRun> = {}): EnrichedRun => ({
+    ...sampleRun(overrides),
+    coverage: {
+      line: 75,
+      projects: {
+        'MyApp.Api': { line: 80 },
+        'MyApp.Tests': { line: 60 },
+      },
+      ...overrides.coverage,
+    },
+  });
+
+  it('renders empty state when no coverage runs', () => {
+    render(<CoverageTrendChart runs={[]} />);
     expect(screen.getByText('No coverage data')).toBeTruthy();
   });
 
-  it('renders bar track and fill structure', () => {
+  it('renders SVG with overall and project polylines', () => {
     const { container } = render(
       <CoverageTrendChart
-        points={[
-          {
-            runId: 'run-1',
-            date: '2026-07-09T12:00:00.000Z',
-            branchLabel: 'main',
-            commitShortSha: 'abc1234',
-            line: 75,
-          },
+        runs={[
+          coverageRun({ runId: 'run-1', date: '2026-07-09T12:00:00.000Z' }),
+          coverageRun({ runId: 'run-2', date: '2026-07-10T12:00:00.000Z', coverage: { line: 80, projects: { 'MyApp.Api': { line: 85 }, 'MyApp.Tests': { line: 65 } } } }),
         ]}
       />,
     );
-    expect(container.querySelector('.duration-trend-bar-track')).toBeTruthy();
-    expect(container.querySelector('.duration-trend-bar-fill')).toBeTruthy();
-    expect(screen.getByText('75%')).toBeTruthy();
+    expect(container.querySelector('.coverage-trend-svg')).toBeTruthy();
+    expect(container.querySelectorAll('.coverage-trend-line').length).toBeGreaterThan(0);
+    expect(container.querySelector('.coverage-trend-line--overall')).toBeTruthy();
   });
 
-  it('calls onBarClick with run id when a bar is clicked', () => {
-    const onBarClick = vi.fn();
-    render(
-      <CoverageTrendChart
-        points={[
-          {
-            runId: 'cov-run',
-            date: '2026-07-09T12:00:00.000Z',
-            branchLabel: 'main',
-            commitShortSha: 'abc1234',
-            line: 80,
-          },
-        ]}
-        onBarClick={onBarClick}
-      />,
+  it('overall line has thicker stroke than project lines', () => {
+    const { container } = render(
+      <CoverageTrendChart runs={[coverageRun()]} />,
     );
-    fireEvent.click(screen.getByRole('button', { name: /80\.0% line coverage/i }));
-    expect(onBarClick).toHaveBeenCalledWith('cov-run');
+    const overall = container.querySelector('.coverage-trend-line--overall');
+    const project = container.querySelector('.coverage-trend-line:not(.coverage-trend-line--overall)');
+    expect(overall?.getAttribute('stroke-width')).toBe('3.5');
+    expect(project?.getAttribute('stroke-width')).toBe('1.5');
+  });
+
+  it('legend lists overall and project names', () => {
+    const { container } = render(<CoverageTrendChart runs={[coverageRun()]} />);
+    const legend = container.querySelector('.coverage-trend-legend');
+    expect(legend?.textContent).toMatch(/Application coverage/);
+    expect(legend?.textContent).toMatch(/Api/);
+    expect(legend?.textContent).toMatch(/Tests/);
+  });
+
+  it('clicking legend item hides the corresponding line', () => {
+    const { container } = render(<CoverageTrendChart runs={[coverageRun()]} />);
+    const apiButton = container.querySelector('[title="MyApp.Api"]');
+    expect(apiButton).toBeTruthy();
+    const linesBefore = container.querySelectorAll('.coverage-trend-line').length;
+    fireEvent.click(apiButton!);
+    const linesAfter = container.querySelectorAll('.coverage-trend-line').length;
+    expect(linesAfter).toBeLessThan(linesBefore);
+    expect(apiButton!.getAttribute('aria-pressed')).toBe('false');
+  });
+
+  it('shows tooltip with series name and percentage on point hover', () => {
+    const { container } = render(<CoverageTrendChart runs={[coverageRun()]} />);
+    const point = container.querySelector('.coverage-trend-point');
+    expect(point).toBeTruthy();
+    fireEvent.mouseEnter(point!);
+    expect(screen.getByRole('tooltip').textContent).toMatch(/Application coverage/);
+    expect(screen.getByRole('tooltip').textContent).toMatch(/75\.0%/);
+  });
+
+  it('calls onPointClick with run id when a point is clicked', () => {
+    const onPointClick = vi.fn();
+    const { container } = render(
+      <CoverageTrendChart runs={[coverageRun({ runId: 'cov-run' })]} onPointClick={onPointClick} />,
+    );
+    const point = container.querySelector('.coverage-trend-point.clickable');
+    fireEvent.click(point!);
+    expect(onPointClick).toHaveBeenCalledWith('cov-run');
   });
 });
 
@@ -144,6 +180,16 @@ describe('DurationTrendChart', () => {
     render(<DurationTrendChart runs={[run]} onBarClick={onBarClick} />);
     fireEvent.click(screen.getByRole('button', { name: /click-me/i }));
     expect(onBarClick).toHaveBeenCalledWith(run);
+  });
+
+  it('limits bars to BUILD_PERFORMANCE_MAX_RUNS and keeps the most recent runs', () => {
+    const runs = Array.from({ length: BUILD_PERFORMANCE_MAX_RUNS + 5 }, (_, i) =>
+      sampleRun({ runId: `run-${i}`, branchLabel: `branch-${i}` }),
+    );
+    const { container } = render(<DurationTrendChart runs={runs} />);
+    expect(container.querySelectorAll('.duration-trend-bar')).toHaveLength(BUILD_PERFORMANCE_MAX_RUNS);
+    expect(screen.queryByText('branch-0')).toBeNull();
+    expect(screen.getByText(`branch-${BUILD_PERFORMANCE_MAX_RUNS + 4}`)).toBeTruthy();
   });
 });
 
@@ -207,10 +253,60 @@ describe('DiagnosticsTrendChart', () => {
     render(<DiagnosticsTrendChart points={[]} />);
     expect(screen.getByText('No diagnostic data')).toBeTruthy();
   });
+
+  it('renders SVG with errors and warnings lines', () => {
+    const { container } = render(
+      <DiagnosticsTrendChart
+        points={[
+          {
+            runId: 'run-1',
+            date: '2026-07-09T12:00:00.000Z',
+            branchLabel: 'main',
+            commitShortSha: 'abc1234',
+            errors: 1,
+            warnings: 2,
+          },
+          {
+            runId: 'run-2',
+            date: '2026-07-10T12:00:00.000Z',
+            branchLabel: 'main',
+            commitShortSha: 'def5678',
+            errors: 0,
+            warnings: 3,
+          },
+        ]}
+      />,
+    );
+    expect(container.querySelector('.coverage-trend-svg')).toBeTruthy();
+    expect(container.querySelectorAll('.coverage-trend-line').length).toBe(2);
+    expect(screen.getByText('Errors')).toBeTruthy();
+    expect(screen.getByText('Warnings')).toBeTruthy();
+  });
+
+  it('calls onPointClick when a point is clicked', () => {
+    const onPointClick = vi.fn();
+    const { container } = render(
+      <DiagnosticsTrendChart
+        points={[{
+          runId: 'run-1',
+          date: '2026-07-09T12:00:00.000Z',
+          branchLabel: 'main',
+          commitShortSha: 'abc1234',
+          errors: 1,
+          warnings: 2,
+        }]}
+        onPointClick={onPointClick}
+      />,
+    );
+    const point = container.querySelector('.coverage-trend-point.clickable');
+    expect(point).toBeTruthy();
+    fireEvent.click(point!);
+    expect(onPointClick).toHaveBeenCalledWith('run-1');
+  });
 });
 
 describe('WorkflowDurationTrendChart', () => {
-  it('renders workflow duration bars', () => {
+  it('renders workflow duration line chart', () => {
     const { container } = render(
       <WorkflowDurationTrendChart
         points={[{
@@ -219,10 +315,31 @@ describe('WorkflowDurationTrendChart', () => {
           branchLabel: 'main',
           commitShortSha: 'abc',
           workflowDurationMs: 120000,
-          testDurationMs: 5000,
         }]}
       />,
     );
-    expect(container.querySelector('.duration-trend-bar-fill')).toBeTruthy();
+    expect(container.querySelector('.coverage-trend-svg')).toBeTruthy();
+    expect(container.querySelector('.coverage-trend-line')).toBeTruthy();
+    expect(screen.getByText('Workflow run')).toBeTruthy();
+  });
+
+  it('calls onPointClick when a point is clicked', () => {
+    const onPointClick = vi.fn();
+    const { container } = render(
+      <WorkflowDurationTrendChart
+        points={[{
+          runId: 'run-1',
+          date: '2026-07-09T12:00:00.000Z',
+          branchLabel: 'main',
+          commitShortSha: 'abc1234',
+          workflowDurationMs: 120000,
+        }]}
+        onPointClick={onPointClick}
+      />,
+    );
+    const point = container.querySelector('.coverage-trend-point.clickable');
+    expect(point).toBeTruthy();
+    fireEvent.click(point!);
+    expect(onPointClick).toHaveBeenCalledWith('run-1');
   });
 });
