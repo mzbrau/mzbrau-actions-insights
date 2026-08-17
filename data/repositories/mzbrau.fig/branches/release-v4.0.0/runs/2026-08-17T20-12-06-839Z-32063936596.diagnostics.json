@@ -1,0 +1,1 @@
+{"version":2,"runId":"32063936596","summary":{"errors":1,"warnings":0,"bySource":{"msbuild":{"errors":1,"warnings":0}}},"items":[{"s":0,"m":"Only one project can be specified.","p":0,"r":"MSB1008","o":"msbuild"}],"sourceFiles":["D:\\a\\fig\\fig\\build.log"],"paths":["MSBUILD"]}
